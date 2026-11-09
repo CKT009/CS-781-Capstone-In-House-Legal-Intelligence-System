@@ -1,0 +1,8 @@
+{
+  "name": "mbr_all15",
+  "method": "consensus (MBR) choice among the 15 runs' generated summaries; agreement = ROUGE-1 + ROUGE-2 F1 on the first 400 words",
+  "runs": ["full", "full_6ep", "qlora", "pfeiffer", "pfeiffer_6ep", "houlsby", "lorma", "lora", "lora_chunk", "lora_lead", "kd", "kd_control", "adalora", "prefix", "prompt"],
+  "val500": {"bertscore_f1": 0.8484, "rouge1": 0.4466, "rougeL": 0.2299},
+  "test_bertscore_f1": 0.8458,
+  "best_single_test": {"pfeiffer": 0.8440}
+}

@@ -1,0 +1,20 @@
+{
+ "name": "lora_k4",
+ "peft": "lora",
+ "K": 4,
+ "keep": "ends",
+ "pool": "attn",
+ "best_step": 8000,
+ "dev": {
+  "global_thr": 0.19,
+  "macro_f1_global": 0.38363314294977763,
+  "macro_f1_perlabel": 0.40683700152011004,
+  "macro_f1_crossfit": 0.38810745074311914,
+  "micro_f1": 0.5011860968817685,
+  "subset_acc": 0.05303997642667714
+ },
+ "trainable": 1960293,
+ "total": 142617957,
+ "wall_min": 149.4,
+ "peak_vram_gb": 2.47
+}

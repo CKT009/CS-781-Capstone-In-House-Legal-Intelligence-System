@@ -1,0 +1,20 @@
+{
+ "name": "gradual_k4",
+ "peft": "gradual",
+ "K": 4,
+ "keep": "ends",
+ "pool": "attn",
+ "best_step": 8000,
+ "dev": {
+  "global_thr": 0.18,
+  "macro_f1_global": 0.3971441132820769,
+  "macro_f1_perlabel": 0.4206891911508455,
+  "macro_f1_crossfit": 0.4012225203354114,
+  "micro_f1": 0.5179876171779711,
+  "subset_acc": 0.05637953049798645
+ },
+ "trainable": 190821,
+ "total": 140848485,
+ "wall_min": 86.7,
+ "peak_vram_gb": 4.24
+}

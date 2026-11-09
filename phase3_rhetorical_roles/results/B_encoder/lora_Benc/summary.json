@@ -1,0 +1,18 @@
+{
+  "name": "lora_Benc",
+  "backbone": "../checkpoints/B_encoder",
+  "peft": "lora",
+  "use_crf": true,
+  "doc_layers": 2,
+  "best": {
+    "macro_f1": 0.3459872936945133,
+    "macro_f1_supported": 0.40889407436624303,
+    "epoch": 10
+  },
+  "epochs": 40,
+  "wall_min": 46.71832648118337,
+  "trainable": 305104,
+  "total": 112814032,
+  "trainable_pct": 0.2704486264616444,
+  "peak_vram_mb": 1930.942464
+}

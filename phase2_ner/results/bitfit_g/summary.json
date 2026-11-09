@@ -1,0 +1,26 @@
+{
+  "name": "bitfit_g",
+  "backbone": "../checkpoints/A_grown",
+  "peft": "bitfit",
+  "train_folds": [
+    "fold1"
+  ],
+  "dev_folds": [
+    "fold2"
+  ],
+  "dev_contaminated": false,
+  "peft_kw": {},
+  "use_crf": false,
+  "best": {
+    "macro_f1": 0.23601534607242503,
+    "epoch": 19,
+    "step": 1501
+  },
+  "epochs": 20,
+  "steps": 1580,
+  "wall_min": 11.7,
+  "trainable": 50713,
+  "total": 138167833,
+  "trainable_pct": 0.036703912118242456,
+  "peak_vram_mb": 969.6
+}

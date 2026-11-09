@@ -1,0 +1,22 @@
+{
+ "name": "lorma",
+ "method": "lorma",
+ "val500": {
+  "rouge1": 0.4263809238896227,
+  "pred_words": 357.55,
+  "rougeL": 0.21838425272123016,
+  "bertscore_f1": 0.8430019617080688
+ },
+ "gen": {
+  "max_new": 460,
+  "min_new": 200,
+  "greedy": true,
+  "repetition_penalty": 1.15,
+  "no_repeat_ngram": 4
+ },
+ "val_gen_min": 13.9,
+ "wall_min": 39.4,
+ "trainable": 1310720,
+ "total": 151747328,
+ "peak_vram_gb": 3.77
+}

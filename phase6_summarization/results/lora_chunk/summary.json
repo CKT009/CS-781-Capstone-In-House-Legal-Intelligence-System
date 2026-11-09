@@ -1,0 +1,22 @@
+{
+ "name": "lora_chunk",
+ "method": "lora",
+ "val500": {
+  "rouge1": 0.4157792502697631,
+  "pred_words": 344.196,
+  "rougeL": 0.21464051276869367,
+  "bertscore_f1": 0.841363787651062
+ },
+ "gen": {
+  "max_new": 460,
+  "min_new": 200,
+  "greedy": true,
+  "repetition_penalty": 1.15,
+  "no_repeat_ngram": 4
+ },
+ "val_gen_min": 15.5,
+ "wall_min": 36.5,
+ "trainable": 1638400,
+ "total": 152075008,
+ "peak_vram_gb": 3.78
+}

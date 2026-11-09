@@ -1,0 +1,23 @@
+*** CONTAMINATED: final-fit run, dev was TRAINING data. This is a training-fit diagnostic, not a validation score. ***
+label                         P      R     F1   gold   pred
+-----------------------------------------------------------
+Fact                      0.874  0.842  0.858    444    428
+Issue                     0.875  0.933  0.903     15     16
+ArgumentPetitioner        0.853  0.858  0.855    400    402
+ArgumentRespondent        0.836  0.658  0.737    272    214
+Statute                   0.902  0.842  0.871    120    112
+Dissent                   0.000  0.000  0.000      0      0  <- no gold support
+PrecedentReliedUpon       0.846  0.819  0.832    254    246
+PrecedentNotReliedUpon    0.732  0.820  0.774     50     56
+PrecedentOverruled        0.000  0.000  0.000      0      0  <- no gold support
+RulingByLowerCourt        0.796  0.422  0.551    102     54
+RatioOfTheDecision        0.664  0.881  0.757    403    535
+RulingByPresentCourt      0.696  0.653  0.674     49     46
+None                      0.667  0.667  0.667     33     33
+-----------------------------------------------------------
+MACRO (all 13)            0.672  0.646  0.652   <- OFFICIAL
+macro (supported only)                  0.771   (11/13 labels have gold here)
+accuracy                                0.799   (diagnostic only, NOT the metric)
+
+2142 sentences scored
+NOTE: 2 label(s) have no gold support in this split, so the official column is mechanically capped at 11/13 = 0.846. Compare models on it anyway -- it is the same cap for all of them -- but do not read it as an estimate of the leaderboard score.

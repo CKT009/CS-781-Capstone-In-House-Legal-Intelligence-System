@@ -1,0 +1,29 @@
+{
+  "name": "adapter_A_f2",
+  "backbone": "../checkpoints/A_decoder",
+  "peft": "adapter",
+  "train_folds": [
+    "fold1",
+    "fold2"
+  ],
+  "dev_folds": [
+    "fold2"
+  ],
+  "dev_contaminated": true,
+  "peft_kw": {
+    "bottleneck": 64
+  },
+  "use_crf": false,
+  "best": {
+    "macro_f1": 0.8257676869420739,
+    "epoch": 10,
+    "step": 1570
+  },
+  "epochs": 10,
+  "steps": 1570,
+  "wall_min": 8.6,
+  "trainable": 1407129,
+  "total": 101797785,
+  "trainable_pct": 1.3822786026238194,
+  "peak_vram_mb": 747.2
+}

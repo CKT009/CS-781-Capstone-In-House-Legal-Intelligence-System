@@ -1,0 +1,28 @@
+{
+  "name": "bag5",
+  "backbone": "../checkpoints/B_grown",
+  "peft": "adapter",
+  "train_folds": [
+    "fold1"
+  ],
+  "dev_folds": [
+    "fold2"
+  ],
+  "dev_contaminated": false,
+  "peft_kw": {
+    "bottleneck": 64
+  },
+  "use_crf": false,
+  "best": {
+    "macro_f1": 0.356178887451058,
+    "epoch": 9,
+    "step": 657
+  },
+  "epochs": 20,
+  "steps": 1460,
+  "wall_min": 11.3,
+  "trainable": 1803673,
+  "total": 142461337,
+  "trainable_pct": 1.2660789502487964,
+  "peak_vram_mb": 938.6
+}

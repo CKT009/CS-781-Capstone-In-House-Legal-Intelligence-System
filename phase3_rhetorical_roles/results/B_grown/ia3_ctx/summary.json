@@ -1,0 +1,18 @@
+{
+  "name": "ia3_ctx",
+  "backbone": "../checkpoints/B_grown",
+  "peft": "ia3",
+  "use_crf": true,
+  "doc_layers": 2,
+  "best": {
+    "macro_f1": 0.4508560930689753,
+    "macro_f1_supported": 0.5328299281724254,
+    "epoch": 20
+  },
+  "epochs": 30,
+  "wall_min": 27.90257507165273,
+  "trainable": 93136,
+  "total": 155129296,
+  "trainable_pct": 0.06003766045583034,
+  "peak_vram_mb": 1802.264064
+}

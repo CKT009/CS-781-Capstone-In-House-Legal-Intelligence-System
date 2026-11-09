@@ -1,0 +1,12 @@
+{
+  "steps": 6000,
+  "tokens": 393216000,
+  "best": {
+    "val_loss": 1.435498946905136,
+    "step": 6000
+  },
+  "wall_min": 297.7,
+  "peak_vram_mb": 16376.4,
+  "params_M": 100.39,
+  "tokens_per_s": 22913.3
+}

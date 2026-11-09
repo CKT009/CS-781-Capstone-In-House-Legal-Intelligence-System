@@ -1,0 +1,19 @@
+{
+ "name": "full_head",
+ "peft": "full",
+ "K": 1,
+ "keep": "head",
+ "pool": "mean",
+ "best": {
+  "score": 0.5980709015426411,
+  "thr": 0.5599999999999999,
+  "step": 3500,
+  "epoch": 1.7326732673267327,
+  "at05": 0.5903132100195533
+ },
+ "dev_report": "macro-F1 0.5981  (P 0.6026  R 0.6004  acc 0.6002)  | class0 F1 0.6270 pred 1440/1252  class1 F1 0.5691 pred 1071/1259",
+ "trainable": 140659969,
+ "total": 140659969,
+ "wall_min": 45.8,
+ "peak_vram_gb": 3.22
+}

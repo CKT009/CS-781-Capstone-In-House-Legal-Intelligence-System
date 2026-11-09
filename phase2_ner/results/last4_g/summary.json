@@ -1,0 +1,28 @@
+{
+  "name": "last4_g",
+  "backbone": "../checkpoints/A_grown",
+  "peft": "last_k",
+  "train_folds": [
+    "fold1"
+  ],
+  "dev_folds": [
+    "fold2"
+  ],
+  "dev_contaminated": false,
+  "peft_kw": {
+    "k": 4
+  },
+  "use_crf": false,
+  "best": {
+    "macro_f1": 0.2782853946420176,
+    "epoch": 14,
+    "step": 1106
+  },
+  "epochs": 20,
+  "steps": 1580,
+  "wall_min": 8.7,
+  "trainable": 25191961,
+  "total": 138167833,
+  "trainable_pct": 18.232869730250457,
+  "peak_vram_mb": 1043.3
+}

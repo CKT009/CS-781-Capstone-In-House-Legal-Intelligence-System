@@ -1,0 +1,29 @@
+{
+  "name": "lora_crf",
+  "backbone": "../checkpoints/B_encoder",
+  "peft": "lora",
+  "train_folds": [
+    "fold1"
+  ],
+  "dev_folds": [
+    "fold2"
+  ],
+  "dev_contaminated": false,
+  "peft_kw": {
+    "r": 8,
+    "alpha": 16
+  },
+  "use_crf": true,
+  "best": {
+    "macro_f1": 0.3218528347397496,
+    "epoch": 5,
+    "step": 395
+  },
+  "epochs": 5,
+  "steps": 395,
+  "wall_min": 5.7,
+  "trainable": 314812,
+  "total": 98445244,
+  "trainable_pct": 0.31978385873064624,
+  "peak_vram_mb": 693.8
+}

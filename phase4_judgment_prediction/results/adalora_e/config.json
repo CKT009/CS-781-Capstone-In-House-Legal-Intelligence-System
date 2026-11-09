@@ -1,0 +1,31 @@
+{
+ "name": "adalora_e",
+ "backbone": "../checkpoints/B_grown",
+ "ckpt": "best.pt",
+ "out_dir": "runs",
+ "peft": "adalora",
+ "peft_kw": {
+  "r": 12,
+  "target_r": 6
+ },
+ "gradual_stages": 4,
+ "L": 1024,
+ "K": 1,
+ "keep": "tail",
+ "pool": "mean",
+ "epochs": 2.0,
+ "batch_docs": 8,
+ "grad_accum": 2,
+ "lr": 0.0001,
+ "head_lr": 0.001,
+ "e_lr_mult": 20,
+ "weight_decay": 0.01,
+ "warmup_frac": 0.06,
+ "grad_clip": 1.0,
+ "balance": true,
+ "grad_checkpoint": false,
+ "eval_every": 500,
+ "max_train": 0,
+ "seed": 1337,
+ "device": "cuda"
+}

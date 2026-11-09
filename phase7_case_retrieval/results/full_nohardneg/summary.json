@@ -1,0 +1,26 @@
+{
+ "name": "full",
+ "peft": "full",
+ "peft_kw": {},
+ "K": 4,
+ "K_eval": 8,
+ "pool": "mean",
+ "best_step": 996,
+ "dev": {
+  "f1": 0.37465258476931623,
+  "p": 0.40799031476997577,
+  "r": 0.34635149023638234,
+  "hits": 337,
+  "r100": 0.7440904419321686
+ },
+ "date_filter": true,
+ "hardneg": false,
+ "trainable": 141248257,
+ "total": 141248257,
+ "pct": 100.0,
+ "steps": 996,
+ "s_per_step": 2.96,
+ "wall_min": 53.7,
+ "peak_vram_gb": 10.15,
+ "submission": "PLM_interp7/subs/full.zip"
+}

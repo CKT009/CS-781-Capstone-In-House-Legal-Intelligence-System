@@ -1,0 +1,19 @@
+{
+ "name": "k8_redact_era",
+ "peft": "full",
+ "K": 8,
+ "keep": "tail",
+ "pool": "attn",
+ "best": {
+  "score": 0.7763330738542376,
+  "thr": 0.3,
+  "step": 3500,
+  "epoch": 1.7326732673267327,
+  "at05": 0.7460984744735133
+ },
+ "dev_report": "macro-F1 0.7763  (P 0.7783  R 0.7767  acc 0.7767)  | class0 F1 0.7678 pred 459/497  class1 F1 0.7849 pred 535/497",
+ "trainable": 140772354,
+ "total": 140772354,
+ "wall_min": 138.0,
+ "peak_vram_gb": 3.76
+}

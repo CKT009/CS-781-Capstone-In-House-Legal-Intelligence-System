@@ -1,0 +1,38 @@
+{
+ "ctx25_C16": {
+  "global_thr": 0.12000000000000001,
+  "macro_f1_global": 0.35592738817514447,
+  "macro_f1_perlabel": 0.37803876113356033,
+  "macro_f1_crossfit": 0.3579708587390438,
+  "micro_f1": 0.4642442892650018,
+  "subset_acc": 0.06178175031922208,
+  "thresholds": null,
+  "runtime_s": 1458.3,
+  "feat_s": 227.2,
+  "n_features": 357173
+ },
+ "ctx50_C16": {
+  "global_thr": 0.11,
+  "macro_f1_global": 0.3778414147700607,
+  "macro_f1_perlabel": 0.39944838024673857,
+  "macro_f1_crossfit": 0.3803175442190412,
+  "micro_f1": 0.4823507100016594,
+  "subset_acc": 0.06482663785482762,
+  "thresholds": null,
+  "runtime_s": 1867.0,
+  "feat_s": 300.3,
+  "n_features": 480150
+ },
+ "ctx25_C4": {
+  "global_thr": 0.13,
+  "macro_f1_global": 0.3536206002534611,
+  "macro_f1_perlabel": 0.3816184643368722,
+  "macro_f1_crossfit": 0.3629203131299649,
+  "micro_f1": 0.46959115551241687,
+  "subset_acc": 0.05971908456929575,
+  "thresholds": null,
+  "runtime_s": 947.5,
+  "feat_s": 2.6,
+  "n_features": 357173
+ }
+}

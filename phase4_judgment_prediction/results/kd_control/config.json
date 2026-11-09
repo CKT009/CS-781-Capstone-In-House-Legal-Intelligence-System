@@ -1,0 +1,31 @@
+{
+ "name": "kd_control",
+ "backbone": "../checkpoints/B_grown",
+ "ckpt": "best.pt",
+ "out_dir": "runs",
+ "peft": "distill",
+ "peft_kw": {
+  "teacher_run": "runs/full_tail",
+  "keep_every": 2,
+  "alpha": 1.0
+ },
+ "gradual_stages": 4,
+ "L": 1024,
+ "K": 1,
+ "keep": "tail",
+ "pool": "mean",
+ "epochs": 2.0,
+ "batch_docs": 8,
+ "grad_accum": 2,
+ "lr": 3e-05,
+ "head_lr": 0.001,
+ "weight_decay": 0.01,
+ "warmup_frac": 0.06,
+ "grad_clip": 1.0,
+ "balance": true,
+ "grad_checkpoint": false,
+ "eval_every": 500,
+ "max_train": 0,
+ "seed": 1337,
+ "device": "cuda"
+}

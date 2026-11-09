@@ -1,0 +1,22 @@
+{
+  "name": "lora_A",
+  "backbone": "../checkpoints/A_decoder",
+  "peft": "lora",
+  "peft_kw": {
+    "r": 8,
+    "alpha": 16
+  },
+  "use_crf": false,
+  "best": {
+    "macro_f1": 0.2955749755650181,
+    "epoch": 8,
+    "step": 632
+  },
+  "epochs": 20,
+  "steps": 1580,
+  "wall_min": 6.5,
+  "trainable": 305945,
+  "total": 100696601,
+  "trainable_pct": 0.3038285274395707,
+  "peak_vram_mb": 744.8
+}

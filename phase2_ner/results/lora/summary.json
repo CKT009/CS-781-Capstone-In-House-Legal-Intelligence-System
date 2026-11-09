@@ -1,0 +1,22 @@
+{
+  "name": "lora",
+  "backbone": "../checkpoints/B_encoder",
+  "peft": "lora",
+  "peft_kw": {
+    "r": 8,
+    "alpha": 16
+  },
+  "use_crf": false,
+  "best": {
+    "macro_f1": 0.3114255025109021,
+    "epoch": 5,
+    "step": 395
+  },
+  "epochs": 5,
+  "steps": 395,
+  "wall_min": 1.6,
+  "trainable": 314137,
+  "total": 98444569,
+  "trainable_pct": 0.31910038633009813,
+  "peak_vram_mb": 693.8
+}

@@ -1,0 +1,35 @@
+{
+ "name": "prefix",
+ "backbone": "A_grown",
+ "method": "prefix",
+ "kw": {
+  "n_prefix": 16,
+  "hidden": 512
+ },
+ "builder": "lr+gbt+mmr0.6",
+ "n_in": 560,
+ "n_out": 460,
+ "epochs": 3.0,
+ "batch": 8,
+ "accum": 2,
+ "lr": 0.001,
+ "e_lr_mult": 20.0,
+ "weight_decay": 0.0,
+ "warmup": 0.05,
+ "grad_ckpt": false,
+ "teacher": "",
+ "keep_every": 2,
+ "kd_alpha": 0.5,
+ "kd_tau": 2.0,
+ "max_train": 0,
+ "sel_docs": 100,
+ "eval_docs": 0,
+ "gen": {
+  "max_new": 460,
+  "min_new": 200,
+  "greedy": true,
+  "repetition_penalty": 1.15,
+  "no_repeat_ngram": 4
+ },
+ "seed": 0
+}

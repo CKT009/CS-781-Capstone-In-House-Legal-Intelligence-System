@@ -1,0 +1,59 @@
+{
+  "backbone": "../checkpoints/B_grown",
+  "epochs": 20,
+  "folds": {
+    "train": [
+      "fold1"
+    ],
+    "dev": [
+      "fold2"
+    ]
+  },
+  "rows": [
+    {
+      "method": "adapter",
+      "macro_f1": 0.4070183022579978,
+      "best_epoch": 8,
+      "epochs": 20,
+      "trainable": 1803673,
+      "trainable_pct": 1.2660789502487964,
+      "wall_min": 8.2
+    },
+    {
+      "method": "distill:kd",
+      "macro_f1": 0.3846495869422661,
+      "best_epoch": 9,
+      "epochs": null,
+      "trainable": 77778265,
+      "trainable_pct": null,
+      "wall_min": 13.5
+    },
+    {
+      "method": "qlora",
+      "macro_f1": 0.3814785722056624,
+      "best_epoch": 10,
+      "epochs": 20,
+      "trainable": 461593,
+      "trainable_pct": 0.3851167313105527,
+      "wall_min": 9.4
+    },
+    {
+      "method": "lora",
+      "macro_f1": 0.37727690025574967,
+      "best_epoch": 11,
+      "epochs": 20,
+      "trainable": 461593,
+      "trainable_pct": 0.3270942675102095,
+      "wall_min": 8.5
+    },
+    {
+      "method": "distill:control",
+      "macro_f1": 0.3425841449541365,
+      "best_epoch": 20,
+      "epochs": null,
+      "trainable": 77778265,
+      "trainable_pct": null,
+      "wall_min": 12.1
+    }
+  ]
+}

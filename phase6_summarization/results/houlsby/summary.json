@@ -1,0 +1,22 @@
+{
+ "name": "houlsby",
+ "method": "houlsby",
+ "val500": {
+  "rouge1": 0.42412867724396275,
+  "pred_words": 344.348,
+  "rougeL": 0.22022474294485914,
+  "bertscore_f1": 0.8442066311836243
+ },
+ "gen": {
+  "max_new": 460,
+  "min_new": 200,
+  "greedy": true,
+  "repetition_penalty": 1.15,
+  "no_repeat_ngram": 4
+ },
+ "val_gen_min": 13.1,
+ "wall_min": 27.1,
+ "trainable": 3965440,
+ "total": 154402048,
+ "peak_vram_gb": 3.8
+}

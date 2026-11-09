@@ -1,0 +1,20 @@
+{
+ "name": "kd_control",
+ "peft": "distill",
+ "K": 4,
+ "keep": "ends",
+ "pool": "attn",
+ "best_step": 8000,
+ "dev": {
+  "global_thr": 0.19999999999999998,
+  "macro_f1_global": 0.4028294365203373,
+  "macro_f1_perlabel": 0.41957966909306216,
+  "macro_f1_crossfit": 0.40221475655361316,
+  "micro_f1": 0.5157352526107818,
+  "subset_acc": 0.06404086042628425
+ },
+ "trainable": 77057637,
+ "total": 77057637,
+ "wall_min": 68.1,
+ "peak_vram_gb": 2.58
+}

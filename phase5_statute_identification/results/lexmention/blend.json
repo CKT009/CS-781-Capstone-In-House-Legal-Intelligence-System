@@ -1,0 +1,74 @@
+{
+ "S0": {
+  "global_thr": 0.16,
+  "macro_f1_global": 0.44289771842044634,
+  "macro_f1_perlabel": 0.46720010579714333,
+  "macro_f1_crossfit": 0.44933165397617003,
+  "micro_f1": 0.5576286597563194,
+  "subset_acc": 0.08397996267557215,
+  "thresholds": null
+ },
+ "mention_alone": {
+  "global_thr": 0.12000000000000001,
+  "macro_f1_global": 0.35592738817514447,
+  "macro_f1_perlabel": 0.37803876113356033,
+  "macro_f1_crossfit": 0.3579708587390438,
+  "micro_f1": 0.4642442892650018,
+  "subset_acc": 0.06178175031922208,
+  "thresholds": null
+ },
+ "S0_lex->mention": {
+  "global_thr": 0.13999999999999999,
+  "macro_f1_global": 0.4323451509804723,
+  "macro_f1_perlabel": 0.4570624651602082,
+  "macro_f1_crossfit": 0.4374483515068034,
+  "micro_f1": 0.5447140592610658,
+  "subset_acc": 0.08437285138984382,
+  "thresholds": null
+ },
+ "S0_lex+mention": {
+  "global_thr": 0.15,
+  "macro_f1_global": 0.4420043399290933,
+  "macro_f1_perlabel": 0.46806824547350445,
+  "macro_f1_crossfit": 0.45169715623463336,
+  "micro_f1": 0.5562227802647063,
+  "subset_acc": 0.09006973774678323,
+  "thresholds": null
+ },
+ "S0_w0.1": {
+  "global_thr": 0.15,
+  "macro_f1_global": 0.44377593596130077,
+  "macro_f1_perlabel": 0.4684729328070437,
+  "macro_f1_crossfit": 0.44989559489147807,
+  "micro_f1": 0.5567087809491477,
+  "subset_acc": 0.08849818288969649,
+  "thresholds": null
+ },
+ "S0_w0.2": {
+  "global_thr": 0.13999999999999999,
+  "macro_f1_global": 0.44192478802248614,
+  "macro_f1_perlabel": 0.4694467358599049,
+  "macro_f1_crossfit": 0.450698204146885,
+  "micro_f1": 0.5575457502063007,
+  "subset_acc": 0.09164129260386995,
+  "thresholds": null
+ },
+ "S0_w0.3": {
+  "global_thr": 0.15,
+  "macro_f1_global": 0.43818453018074427,
+  "macro_f1_perlabel": 0.4665161953325471,
+  "macro_f1_crossfit": 0.4486758213710136,
+  "micro_f1": 0.5534709865411944,
+  "subset_acc": 0.0880070719968569,
+  "thresholds": null
+ },
+ "S0_w0.4": {
+  "global_thr": 0.13,
+  "macro_f1_global": 0.43360292543191165,
+  "macro_f1_perlabel": 0.46259589952680075,
+  "macro_f1_crossfit": 0.44342339161619826,
+  "micro_f1": 0.5469904963041182,
+  "subset_acc": 0.08722129456831353,
+  "thresholds": null
+ }
+}

@@ -1,0 +1,29 @@
+{
+  "name": "prefix_g_f2",
+  "backbone": "../checkpoints/A_grown",
+  "peft": "prefix",
+  "train_folds": [
+    "fold1",
+    "fold2"
+  ],
+  "dev_folds": [
+    "fold2"
+  ],
+  "dev_contaminated": true,
+  "peft_kw": {
+    "n_prefix": 16
+  },
+  "use_crf": false,
+  "best": {
+    "macro_f1": 0.4592165366029362,
+    "epoch": 18,
+    "step": 2826
+  },
+  "epochs": 18,
+  "steps": 2826,
+  "wall_min": 14.6,
+  "trainable": 183065,
+  "total": 138331673,
+  "trainable_pct": 0.13233773294999476,
+  "peak_vram_mb": 947.1
+}

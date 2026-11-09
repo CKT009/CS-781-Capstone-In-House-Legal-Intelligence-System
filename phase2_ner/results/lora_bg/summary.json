@@ -1,0 +1,29 @@
+{
+  "name": "lora_bg",
+  "backbone": "../checkpoints/B_grown",
+  "peft": "lora",
+  "train_folds": [
+    "fold1"
+  ],
+  "dev_folds": [
+    "fold2"
+  ],
+  "dev_contaminated": false,
+  "peft_kw": {
+    "r": 8,
+    "alpha": 16
+  },
+  "use_crf": false,
+  "best": {
+    "macro_f1": 0.37727690025574967,
+    "epoch": 11,
+    "step": 869
+  },
+  "epochs": 20,
+  "steps": 1580,
+  "wall_min": 8.5,
+  "trainable": 461593,
+  "total": 141119257,
+  "trainable_pct": 0.3270942675102095,
+  "peak_vram_mb": 929.7
+}

@@ -1,0 +1,22 @@
+{
+ "name": "lora",
+ "method": "lora",
+ "val500": {
+  "rouge1": 0.4204965436608371,
+  "pred_words": 335.908,
+  "rougeL": 0.21928599438460863,
+  "bertscore_f1": 0.8444299101829529
+ },
+ "gen": {
+  "max_new": 460,
+  "min_new": 200,
+  "greedy": true,
+  "repetition_penalty": 1.15,
+  "no_repeat_ngram": 4
+ },
+ "val_gen_min": 13.5,
+ "wall_min": 41.7,
+ "trainable": 1638400,
+ "total": 152075008,
+ "peak_vram_gb": 3.77
+}

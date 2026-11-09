@@ -1,0 +1,22 @@
+{
+ "name": "prefix",
+ "method": "prefix",
+ "val500": {
+  "rouge1": 0.42287972544091523,
+  "pred_words": 365.332,
+  "rougeL": 0.21546272173365863,
+  "bertscore_f1": 0.8407315015792847
+ },
+ "gen": {
+  "max_new": 460,
+  "min_new": 200,
+  "greedy": true,
+  "repetition_penalty": 1.15,
+  "no_repeat_ngram": 4
+ },
+ "val_gen_min": 11.4,
+ "wall_min": 21.3,
+ "trainable": 5659136,
+ "total": 156095744,
+ "peak_vram_gb": 7.16
+}

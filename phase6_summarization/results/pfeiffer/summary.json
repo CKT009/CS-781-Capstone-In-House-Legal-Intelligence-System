@@ -1,0 +1,22 @@
+{
+ "name": "pfeiffer",
+ "method": "pfeiffer",
+ "val500": {
+  "rouge1": 0.4329676137442891,
+  "pred_words": 368.61,
+  "rougeL": 0.22320046977920852,
+  "bertscore_f1": 0.844480574131012
+ },
+ "gen": {
+  "max_new": 460,
+  "min_new": 200,
+  "greedy": true,
+  "repetition_penalty": 1.15,
+  "no_repeat_ngram": 4
+ },
+ "val_gen_min": 11.2,
+ "wall_min": 24.5,
+ "trainable": 3950080,
+ "total": 154386688,
+ "peak_vram_gb": 3.8
+}

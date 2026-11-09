@@ -1,0 +1,29 @@
+{
+  "name": "qlora_g",
+  "backbone": "../checkpoints/A_grown",
+  "peft": "qlora",
+  "train_folds": [
+    "fold1"
+  ],
+  "dev_folds": [
+    "fold2"
+  ],
+  "dev_contaminated": false,
+  "peft_kw": {
+    "r": 8,
+    "alpha": 16
+  },
+  "use_crf": false,
+  "best": {
+    "macro_f1": 0.3274968291588018,
+    "epoch": 12,
+    "step": 948
+  },
+  "epochs": 20,
+  "steps": 1580,
+  "wall_min": 11.9,
+  "trainable": 428825,
+  "total": 122848793,
+  "trainable_pct": 0.34906732864685125,
+  "peak_vram_mb": 909.2
+}

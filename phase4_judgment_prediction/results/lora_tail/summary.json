@@ -1,0 +1,19 @@
+{
+ "name": "lora_tail",
+ "peft": "lora",
+ "K": 1,
+ "keep": "tail",
+ "pool": "mean",
+ "best": {
+  "score": 0.726056463463508,
+  "thr": 0.5449999999999999,
+  "step": 4000,
+  "epoch": 1.9801980198019802,
+  "at05": 0.7176020637601379
+ },
+ "dev_report": "macro-F1 0.7261  (P 0.7296  R 0.7270  acc 0.7268)  | class0 F1 0.7403 pred 1390/1252  class1 F1 0.7118 pred 1121/1259",
+ "trainable": 1771777,
+ "total": 142429441,
+ "wall_min": 33.4,
+ "peak_vram_gb": 1.39
+}

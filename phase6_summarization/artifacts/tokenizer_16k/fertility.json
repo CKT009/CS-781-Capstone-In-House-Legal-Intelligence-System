@@ -1,0 +1,17 @@
+{
+  "vocab": 16000,
+  "fertility": {
+    "tokens_per_word": 1.289,
+    "chars_per_token": 4.59,
+    "n_docs": 120
+  },
+  "probe_token_counts": {
+    "Section 302 IPC": 3,
+    "Article 226 of the Constitution": 5,
+    "AIR 1973 SC 1461": 5,
+    "(2017) 10 SCC 1": 6,
+    "learned counsel for the appellant": 5,
+    "<NAME>": 1,
+    "<ENTITY>": 1
+  }
+}

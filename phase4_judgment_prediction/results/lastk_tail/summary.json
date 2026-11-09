@@ -1,0 +1,19 @@
+{
+ "name": "lastk_tail",
+ "peft": "last_k",
+ "K": 1,
+ "keep": "tail",
+ "pool": "mean",
+ "best": {
+  "score": 0.7413930554478332,
+  "thr": 0.4649999999999999,
+  "step": 4040,
+  "epoch": 2.0,
+  "at05": 0.7362884660896006
+ },
+ "dev_report": "macro-F1 0.7414  (P 0.7442  R 0.7421  acc 0.7419)  | class0 F1 0.7532 pred 1374/1252  class1 F1 0.7295 pred 1137/1259",
+ "trainable": 42531073,
+ "total": 140659969,
+ "wall_min": 28.4,
+ "peak_vram_gb": 1.61
+}

@@ -1,0 +1,19 @@
+{
+ "name": "kd_control",
+ "peft": "distill",
+ "K": 1,
+ "keep": "tail",
+ "pool": "mean",
+ "best": {
+  "score": 0.717851556350081,
+  "thr": 0.26999999999999996,
+  "step": 2000,
+  "epoch": 0.9900990099009901,
+  "at05": 0.6817859844164575
+ },
+ "dev_report": "macro-F1 0.7179  (P 0.7185  R 0.7180  acc 0.7180)  | class0 F1 0.7105 pred 1194/1252  class1 F1 0.7252 pred 1317/1259",
+ "trainable": 76869121,
+ "total": 76869121,
+ "wall_min": 34.2,
+ "peak_vram_gb": 1.84
+}

@@ -1,0 +1,19 @@
+{
+ "name": "adapter_tail",
+ "peft": "adapter",
+ "K": 1,
+ "keep": "tail",
+ "pool": "mean",
+ "best": {
+  "score": 0.7483054911981972,
+  "thr": 0.49499999999999994,
+  "step": 3000,
+  "epoch": 1.4851485148514851,
+  "at05": 0.7478962447165229
+ },
+ "dev_report": "macro-F1 0.7483  (P 0.7483  R 0.7483  acc 0.7483)  | class0 F1 0.7490 pred 1266/1252  class1 F1 0.7476 pred 1245/1259",
+ "trainable": 1786753,
+ "total": 142444417,
+ "wall_min": 40.4,
+ "peak_vram_gb": 1.37
+}

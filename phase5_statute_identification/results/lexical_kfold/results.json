@@ -1,0 +1,79 @@
+{
+ "variant": "w12_C16_nobal",
+ "fold_runtime_s": {
+  "0": 1023.8872849941254,
+  "1": 747.4716603755951,
+  "2": 772.149772644043,
+  "3": 829.9809083938599,
+  "4": 778.8302707672119
+ },
+ "a_trainoof_thr_on_dev_oof": {
+  "macro_f1": 0.4307510439397015,
+  "micro_f1": 0.5271646127519175,
+  "subset_acc": 0.09557017974658678
+ },
+ "b_dev_oof_evaluate": {
+  "global_thr": 0.12000000000000001,
+  "macro_f1_global": 0.4219285754745035,
+  "macro_f1_perlabel": 0.44593059974464294,
+  "macro_f1_crossfit": 0.42777519260994035,
+  "micro_f1": 0.5345492127180984,
+  "subset_acc": 0.09635595717513014
+ },
+ "c": {
+  "trainoof_thr": 0.4307510439397015,
+  "dev_insample_thr": 0.44593059974464294,
+  "dev_crossfit": 0.42777519260994035,
+  "halves_trainoof_thr": 0.430221214909818,
+  "halves_trainoof+halfdev_thr": 0.4305770467824377
+ },
+ "reference": {
+  "trainonly_w12_C16": {
+   "global_thr": 0.1,
+   "macro_f1_global": 0.40507173661609164,
+   "macro_f1_perlabel": 0.4302963515514619,
+   "macro_f1_crossfit": 0.41220862167962646,
+   "micro_f1": 0.5175111153379776,
+   "subset_acc": 0.08014929771142323,
+   "with_trainoof_thr": 0.4130198066269479
+  },
+  "trainonly_avg2": {
+   "global_thr": 0.09000000000000001,
+   "macro_f1_global": 0.4100437413757754,
+   "macro_f1_perlabel": 0.4343377719211845,
+   "macro_f1_crossfit": 0.41509830469259723,
+   "micro_f1": 0.5216597077244259,
+   "subset_acc": 0.07867596503290443,
+   "with_trainoof_thr": 0.4169541055759558
+  }
+ },
+ "blend": {
+  "S0_old_lexical": {
+   "global_thr": 0.16,
+   "macro_f1_global": 0.44289771842044634,
+   "macro_f1_perlabel": 0.46720010579714333,
+   "macro_f1_crossfit": 0.44933165397617003,
+   "micro_f1": 0.5576286597563194,
+   "subset_acc": 0.08397996267557215
+  },
+  "S1_kfold_oof": {
+   "global_thr": 0.16,
+   "macro_f1_global": 0.45530938013918076,
+   "macro_f1_perlabel": 0.47922447450009825,
+   "macro_f1_crossfit": 0.46005285502419824,
+   "micro_f1": 0.5646211654403325,
+   "subset_acc": 0.08957862685394362
+  }
+ },
+ "lc_80pct_train": {
+  "global_thr": 0.1,
+  "macro_f1_global": 0.3929186782506897,
+  "macro_f1_perlabel": 0.4203720487069598,
+  "macro_f1_crossfit": 0.3996924493106608,
+  "micro_f1": 0.5084652344264848,
+  "subset_acc": 0.07484530006875552,
+  "n": 34200,
+  "sec": 565.0770261287689
+ },
+ "total_runtime_s": 4863.158025503159
+}

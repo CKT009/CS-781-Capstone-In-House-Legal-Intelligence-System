@@ -1,0 +1,18 @@
+{
+  "name": "ia3_ctx1k_nodoc",
+  "backbone": "../checkpoints/B_grown",
+  "peft": "ia3",
+  "use_crf": true,
+  "doc_layers": 0,
+  "best": {
+    "macro_f1": 0.4402216627330993,
+    "macro_f1_supported": 0.5202619650482082,
+    "epoch": 11
+  },
+  "epochs": 30,
+  "wall_min": 26.647777581214903,
+  "trainable": 93136,
+  "total": 140750800,
+  "trainable_pct": 0.06617084947296925,
+  "peak_vram_mb": 1759.82336
+}

@@ -1,0 +1,22 @@
+{
+ "name": "kd_control",
+ "method": "student",
+ "val500": {
+  "rouge1": 0.40967907836074124,
+  "pred_words": 324.908,
+  "rougeL": 0.2146783302841413,
+  "bertscore_f1": 0.8411588072776794
+ },
+ "gen": {
+  "max_new": 460,
+  "min_new": 200,
+  "greedy": true,
+  "repetition_penalty": 1.15,
+  "no_repeat_ngram": 4
+ },
+ "val_gen_min": 6.0,
+ "wall_min": 12.2,
+ "trainable": 87506688,
+ "total": 87506688,
+ "peak_vram_gb": 4.2
+}

@@ -1,0 +1,21 @@
+{
+  "name": "last4_B",
+  "backbone": "../checkpoints/B_encoder",
+  "peft": "last_k",
+  "peft_kw": {
+    "k": 4
+  },
+  "use_crf": false,
+  "best": {
+    "macro_f1": 0.3126406376398206,
+    "epoch": 7,
+    "step": 553
+  },
+  "epochs": 20,
+  "steps": 1580,
+  "wall_min": 9.8,
+  "trainable": 28372249,
+  "total": 98149657,
+  "trainable_pct": 28.90713005752022,
+  "peak_vram_mb": 891.2
+}

@@ -1,0 +1,29 @@
+{
+  "name": "qlora",
+  "backbone": "../checkpoints/B_encoder",
+  "peft": "qlora",
+  "train_folds": [
+    "fold1"
+  ],
+  "dev_folds": [
+    "fold2"
+  ],
+  "dev_contaminated": false,
+  "peft_kw": {
+    "r": 8,
+    "alpha": 16
+  },
+  "use_crf": false,
+  "best": {
+    "macro_f1": 0.341110876995461,
+    "epoch": 15,
+    "step": 1185
+  },
+  "epochs": 20,
+  "steps": 1580,
+  "wall_min": 5.8,
+  "trainable": 314137,
+  "total": 84270361,
+  "trainable_pct": 0.3727728186663399,
+  "peak_vram_mb": 646.8
+}

@@ -1,0 +1,62 @@
+{
+ "W25_train": {
+  "docs": 42750,
+  "with_mask": 38490,
+  "frac_with_mask": 0.9004,
+  "fallback_full": 4260,
+  "median_mentions": 8.0,
+  "median_ctx_words": 155.0,
+  "median_full_words": 430.0,
+  "median_ctx_over_full": 0.295
+ },
+ "W25_dev": {
+  "docs": 10181,
+  "with_mask": 9215,
+  "frac_with_mask": 0.9051,
+  "fallback_full": 966,
+  "median_mentions": 8.0,
+  "median_ctx_words": 166.0,
+  "median_full_words": 543.0,
+  "median_ctx_over_full": 0.2822
+ },
+ "W25_test": {
+  "docs": 13019,
+  "with_mask": 11811,
+  "frac_with_mask": 0.9072,
+  "fallback_full": 1208,
+  "median_mentions": 8.0,
+  "median_ctx_words": 165.0,
+  "median_full_words": 532.0,
+  "median_ctx_over_full": 0.2846
+ },
+ "W50_train": {
+  "docs": 42750,
+  "with_mask": 38490,
+  "frac_with_mask": 0.9004,
+  "fallback_full": 4260,
+  "median_mentions": 8.0,
+  "median_ctx_words": 230.0,
+  "median_full_words": 430.0,
+  "median_ctx_over_full": 0.4636
+ },
+ "W50_dev": {
+  "docs": 10181,
+  "with_mask": 9215,
+  "frac_with_mask": 0.9051,
+  "fallback_full": 966,
+  "median_mentions": 8.0,
+  "median_ctx_words": 264.0,
+  "median_full_words": 543.0,
+  "median_ctx_over_full": 0.4438
+ },
+ "W50_test": {
+  "docs": 13019,
+  "with_mask": 11811,
+  "frac_with_mask": 0.9072,
+  "fallback_full": 1208,
+  "median_mentions": 8.0,
+  "median_ctx_words": 259.0,
+  "median_full_words": 532.0,
+  "median_ctx_over_full": 0.4498
+ }
+}

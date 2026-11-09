@@ -1,0 +1,35 @@
+{
+ "name": "lora",
+ "peft": "lora",
+ "peft_kw": {
+  "r": 16,
+  "alpha": 32,
+  "targets": [
+   "q_proj",
+   "k_proj",
+   "v_proj",
+   "o_proj"
+  ]
+ },
+ "K": 4,
+ "K_eval": 8,
+ "pool": "mean",
+ "best_step": 664,
+ "dev": {
+  "f1": 0.37576431350750417,
+  "p": 0.4092009685230024,
+  "r": 0.3473792394655704,
+  "hits": 338,
+  "r100": 0.7451181911613566
+ },
+ "date_filter": true,
+ "hardneg": true,
+ "trainable": 2360065,
+ "total": 143017729,
+ "pct": 1.65,
+ "steps": 996,
+ "s_per_step": 4.41,
+ "wall_min": 78.4,
+ "peak_vram_gb": 12.68,
+ "submission": "PLM_interp7/subs/lora.zip"
+}

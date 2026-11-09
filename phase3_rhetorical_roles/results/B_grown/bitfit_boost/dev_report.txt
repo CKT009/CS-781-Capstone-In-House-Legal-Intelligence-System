@@ -1,0 +1,22 @@
+label                         P      R     F1   gold   pred
+-----------------------------------------------------------
+Fact                      0.604  0.653  0.628    444    480
+Issue                     0.800  0.533  0.640     15     10
+ArgumentPetitioner        0.621  0.430  0.508    400    277
+ArgumentRespondent        0.667  0.110  0.189    272     45
+Statute                   0.788  0.683  0.732    120    104
+Dissent                   0.000  0.000  0.000      0      0  <- no gold support
+PrecedentReliedUpon       0.437  0.425  0.431    254    247
+PrecedentNotReliedUpon    0.500  0.160  0.242     50     16
+PrecedentOverruled        0.000  0.000  0.000      0      0  <- no gold support
+RulingByLowerCourt        0.406  0.127  0.194    102     32
+RatioOfTheDecision        0.358  0.779  0.490    403    878
+RulingByPresentCourt      0.515  0.347  0.415     49     33
+None                      0.400  0.242  0.302     33     20
+-----------------------------------------------------------
+MACRO (all 13)            0.469  0.345  0.367   <- OFFICIAL
+macro (supported only)                  0.434   (11/13 labels have gold here)
+accuracy                                0.490   (diagnostic only, NOT the metric)
+
+2142 sentences scored
+NOTE: 2 label(s) have no gold support in this split, so the official column is mechanically capped at 11/13 = 0.846. Compare models on it anyway -- it is the same cap for all of them -- but do not read it as an estimate of the leaderboard score.

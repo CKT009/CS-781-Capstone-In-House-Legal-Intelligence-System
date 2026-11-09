@@ -1,0 +1,21 @@
+{
+  "name": "prefix_A",
+  "backbone": "../checkpoints/A_decoder",
+  "peft": "prefix",
+  "peft_kw": {
+    "n_prefix": 16
+  },
+  "use_crf": false,
+  "best": {
+    "macro_f1": 0.1803147531855345,
+    "epoch": 18,
+    "step": 1422
+  },
+  "epochs": 20,
+  "steps": 1580,
+  "wall_min": 9.9,
+  "trainable": 133913,
+  "total": 100524569,
+  "trainable_pct": 0.13321419960527262,
+  "peak_vram_mb": 1908.0
+}

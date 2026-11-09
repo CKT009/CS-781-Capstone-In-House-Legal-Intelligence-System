@@ -1,0 +1,28 @@
+{
+  "name": "adapter_crf",
+  "backbone": "../checkpoints/B_encoder",
+  "peft": "adapter",
+  "train_folds": [
+    "fold1"
+  ],
+  "dev_folds": [
+    "fold2"
+  ],
+  "dev_contaminated": false,
+  "peft_kw": {
+    "bottleneck": 64
+  },
+  "use_crf": true,
+  "best": {
+    "macro_f1": 0.4019420235592377,
+    "epoch": 9,
+    "step": 711
+  },
+  "epochs": 20,
+  "steps": 1580,
+  "wall_min": 20.1,
+  "trainable": 1209532,
+  "total": 99339964,
+  "trainable_pct": 1.217568389696618,
+  "peak_vram_mb": 697.6
+}

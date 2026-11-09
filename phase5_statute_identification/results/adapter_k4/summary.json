@@ -1,0 +1,20 @@
+{
+ "name": "adapter_k4",
+ "peft": "adapter",
+ "K": 4,
+ "keep": "ends",
+ "pool": "attn",
+ "best_step": 8000,
+ "dev": {
+  "global_thr": 0.16,
+  "macro_f1_global": 0.38011757236449945,
+  "macro_f1_perlabel": 0.40841421961325125,
+  "macro_f1_crossfit": 0.3884126599176957,
+  "micro_f1": 0.5079277476918124,
+  "subset_acc": 0.04940575581966408
+ },
+ "trainable": 1975269,
+ "total": 142632933,
+ "wall_min": 122.0,
+ "peak_vram_gb": 2.46
+}

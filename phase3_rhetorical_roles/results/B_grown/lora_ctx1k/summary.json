@@ -1,0 +1,18 @@
+{
+  "name": "lora_ctx1k",
+  "backbone": "../checkpoints/B_grown",
+  "peft": "lora",
+  "use_crf": true,
+  "doc_layers": 2,
+  "best": {
+    "macro_f1": 0.4575793872290034,
+    "macro_f1_supported": 0.5407756394524585,
+    "epoch": 8
+  },
+  "epochs": 30,
+  "wall_min": 26.624580470720925,
+  "trainable": 452560,
+  "total": 155488720,
+  "trainable_pct": 0.29105648306835374,
+  "peak_vram_mb": 1721.905664
+}

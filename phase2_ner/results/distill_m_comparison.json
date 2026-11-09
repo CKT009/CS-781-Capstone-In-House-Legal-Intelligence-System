@@ -1,0 +1,27 @@
+{
+  "gap": 0.021272659444676323,
+  "kd": {
+    "name": "distill_m_kd",
+    "mode": "kd",
+    "best": {
+      "macro_f1": 0.31236370137660524,
+      "epoch": 20,
+      "step": 1580
+    },
+    "params": 62506153,
+    "teacher_params": 102016585,
+    "wall_min": 10.8
+  },
+  "control": {
+    "name": "distill_m_control",
+    "mode": "control",
+    "best": {
+      "macro_f1": 0.2910910419319289,
+      "epoch": 7,
+      "step": 553
+    },
+    "params": 62506153,
+    "teacher_params": 102016585,
+    "wall_min": 8.3
+  }
+}

@@ -1,0 +1,28 @@
+{
+ "name": "partial",
+ "peft": "last_k",
+ "peft_kw": {
+  "k": 6
+ },
+ "K": 4,
+ "K_eval": 8,
+ "pool": "mean",
+ "best_step": 664,
+ "dev": {
+  "f1": 0.3802112284602557,
+  "p": 0.41404358353510895,
+  "r": 0.35149023638232274,
+  "hits": 342,
+  "r100": 0.7471736896197327
+ },
+ "date_filter": true,
+ "hardneg": true,
+ "trainable": 43119361,
+ "total": 141248257,
+ "pct": 30.527,
+ "steps": 996,
+ "s_per_step": 3.97,
+ "wall_min": 73.1,
+ "peak_vram_gb": 5.88,
+ "submission": "PLM_interp7/subs/partial.zip"
+}

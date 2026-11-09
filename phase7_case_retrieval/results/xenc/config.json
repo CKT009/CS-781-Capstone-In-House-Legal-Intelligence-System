@@ -1,0 +1,13 @@
+{
+ "gpu": 1,
+ "name": "xenc",
+ "peft": "full",
+ "lr": 2e-05,
+ "head_lr": 0.001,
+ "epochs": 1.0,
+ "groups_per_step": 2,
+ "n_neg": 7,
+ "shortlist": 30,
+ "eval_every": 500,
+ "smoke": false
+}

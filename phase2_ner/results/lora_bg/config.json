@@ -1,0 +1,39 @@
+{
+  "name": "lora_bg",
+  "backbone": "../checkpoints/B_grown",
+  "ckpt": "best.pt",
+  "peft": "lora",
+  "peft_kw": {
+    "r": 8,
+    "alpha": 16
+  },
+  "use_crf": false,
+  "data_dir": "data/Phase_2_LNER",
+  "train_folds": [
+    "fold1"
+  ],
+  "dev_folds": [
+    "fold2"
+  ],
+  "max_len": 512,
+  "stride": 128,
+  "class_weight": "inv_sqrt",
+  "class_weight_cap": 20.0,
+  "epochs": 20,
+  "batch_size": 8,
+  "grad_accum": 1,
+  "lr": 0.0003,
+  "head_lr": 0.001,
+  "weight_decay": 0.01,
+  "warmup_frac": 0.1,
+  "grad_clip": 1.0,
+  "dropout": 0.1,
+  "amp": "bf16",
+  "grad_checkpoint": false,
+  "seed": 1337,
+  "out_dir": "runs",
+  "eval_every_epochs": 1.0,
+  "log_every": 20,
+  "device": "cuda",
+  "num_workers": 2
+}

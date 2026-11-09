@@ -1,0 +1,17 @@
+11:53:47 pooled 52931 (42750 train + 10181 dev), test 13019
+11:53:47 fold sizes [10587, 10586, 10586, 10586, 10586]
+11:55:47 counts (52931, 840952) test (13019, 840952) in 120s
+12:12:52 fold 0: (42344, 400000) tfidf 16s total 1024s | in-fold per-label macro-F1 0.4575
+12:25:20 fold 1: (42345, 400000) tfidf 7s total 747s | in-fold per-label macro-F1 0.4599
+12:38:13 fold 2: (42345, 400000) tfidf 5s total 772s | in-fold per-label macro-F1 0.4601
+12:52:04 fold 3: (42345, 400000) tfidf 10s total 830s | in-fold per-label macro-F1 0.4616
+13:05:03 fold 4: (42345, 400000) tfidf 10s total 779s | in-fold per-label macro-F1 0.4553
+13:05:06 (a) dev OOF, thresholds from train OOF: macro-F1 0.4308 micro 0.5272
+13:05:08 (b) dev OOF evaluate: macro-F1 per-label 0.4459 (cross-fit 0.4278) | global 0.4219 @0.12 | micro 0.5345 | subset 0.0964
+13:05:13 (c) dev OOF: train-OOF thr 0.4308 | dev in-sample thr 0.4459 | dev cross-fit 0.4278 | same halves w/ train-OOF thr 0.4302 | train-OOF+other-half thr 0.4306
+13:05:15 ref train-only w12_C16 dev: macro-F1 per-label 0.4303 (cross-fit 0.4122) | global 0.4051 @0.10 | micro 0.5175 | subset 0.0801 | with train-OOF thr 0.4130
+13:05:17 ref train-only avg2 (runs/lexical) dev: macro-F1 per-label 0.4343 (cross-fit 0.4151) | global 0.4100 @0.09 | micro 0.5217 | subset 0.0787 | with train-OOF thr 0.4170
+13:05:20 blend S0 (old lexical): macro-F1 per-label 0.4672 (cross-fit 0.4493) | global 0.4429 @0.16 | micro 0.5576 | subset 0.0840
+13:05:20 blend S1 (kfold OOF)  : macro-F1 per-label 0.4792 (cross-fit 0.4601) | global 0.4553 @0.16 | micro 0.5646 | subset 0.0896
+13:14:45 LC 80% train (34200 docs) -> dev: macro-F1 per-label 0.4204 (cross-fit 0.3997) | global 0.3929 @0.10 | micro 0.5085 | subset 0.0748
+13:14:45 done in 4863s

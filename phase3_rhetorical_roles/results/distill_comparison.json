@@ -1,0 +1,27 @@
+{
+  "gap": 0.019940436519013754,
+  "kd": {
+    "name": "distill_kd",
+    "mode": "kd",
+    "best": {
+      "macro_f1": 0.24614677798101411,
+      "macro_f1_supported": 0.29090073761392576,
+      "epoch": 20
+    },
+    "params": 92147728,
+    "teacher_params": 156830800,
+    "wall_min": 77.88720931212107
+  },
+  "control": {
+    "name": "distill_control",
+    "mode": "control",
+    "best": {
+      "macro_f1": 0.22620634146200036,
+      "macro_f1_supported": 0.26733476718236404,
+      "epoch": 16
+    },
+    "params": 92147728,
+    "teacher_params": 156830800,
+    "wall_min": 39.143996981779736
+  }
+}

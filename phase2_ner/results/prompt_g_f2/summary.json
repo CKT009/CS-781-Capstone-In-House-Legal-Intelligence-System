@@ -1,0 +1,29 @@
+{
+  "name": "prompt_g_f2",
+  "backbone": "../checkpoints/A_grown",
+  "peft": "prompt",
+  "train_folds": [
+    "fold1",
+    "fold2"
+  ],
+  "dev_folds": [
+    "fold2"
+  ],
+  "dev_contaminated": true,
+  "peft_kw": {
+    "n_prompt": 20
+  },
+  "use_crf": false,
+  "best": {
+    "macro_f1": 0.5014979314684694,
+    "epoch": 17,
+    "step": 2669
+  },
+  "epochs": 17,
+  "steps": 2669,
+  "wall_min": 14.7,
+  "trainable": 34585,
+  "total": 138183193,
+  "trainable_pct": 0.02502836940524308,
+  "peak_vram_mb": 959.6
+}

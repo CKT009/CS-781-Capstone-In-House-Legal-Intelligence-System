@@ -1,0 +1,19 @@
+{
+ "name": "full_k4_attn_s2",
+ "peft": "full",
+ "K": 4,
+ "keep": "tail",
+ "pool": "attn",
+ "best": {
+  "score": 0.768585048017828,
+  "thr": 0.4049999999999999,
+  "step": 3000,
+  "epoch": 1.4851485148514851,
+  "at05": 0.7570215448238314
+ },
+ "dev_report": "macro-F1 0.7686  (P 0.7688  R 0.7687  acc 0.7686)  | class0 F1 0.7713 pred 1289/1252  class1 F1 0.7658 pred 1222/1259",
+ "trainable": 140772354,
+ "total": 140772354,
+ "wall_min": 128.6,
+ "peak_vram_gb": 3.24
+}

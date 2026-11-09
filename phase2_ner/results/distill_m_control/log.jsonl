@@ -1,0 +1,99 @@
+{"step": 20, "epoch": 1, "mode": "control", "loss": 0.662439227104187, "time": 1791710711.3421721}
+{"step": 40, "epoch": 1, "mode": "control", "loss": 0.3793661296367645, "time": 1791710714.288269}
+{"step": 60, "epoch": 1, "mode": "control", "loss": 0.18653982877731323, "time": 1791710717.0006018}
+{"step": 79, "epoch": 1, "mode": "control", "macro_f1": 0.2029718846334173, "macro_p": 0.15500147323272237, "macro_r": 0.3141233321463688, "micro_f1": 0.26550701186623515, "micro_p": 0.1864759920447012, "micro_r": 0.4608003744441844, "support": 4273, "tp": 1969, "fp": 8590, "fn": 2304, "n_pred": 10559, "n_labels": 12, "n_labels_with_support": 12, "macro_f1_labels_with_support": 0.2029718846334173, "time": 1791710723.435217}
+{"step": 80, "epoch": 2, "mode": "control", "loss": 0.06303795427083969, "time": 1791710741.0722883}
+{"step": 100, "epoch": 2, "mode": "control", "loss": 0.1090298518538475, "time": 1791710743.8407423}
+{"step": 120, "epoch": 2, "mode": "control", "loss": 0.07018031179904938, "time": 1791710746.6829658}
+{"step": 140, "epoch": 2, "mode": "control", "loss": 0.08922632783651352, "time": 1791710749.5009954}
+{"step": 158, "epoch": 2, "mode": "control", "macro_f1": 0.25202488993019345, "macro_p": 0.2049724233074313, "macro_r": 0.3590070906643026, "micro_f1": 0.33783354510800506, "micro_p": 0.2556797692030292, "micro_r": 0.4977767376550433, "support": 4273, "tp": 2127, "fp": 6192, "fn": 2146, "n_pred": 8319, "n_labels": 12, "n_labels_with_support": 12, "macro_f1_labels_with_support": 0.25202488993019345, "time": 1791710755.4075387}
+{"step": 160, "epoch": 3, "mode": "control", "loss": 0.055458687245845795, "time": 1791710771.6970384}
+{"step": 180, "epoch": 3, "mode": "control", "loss": 0.03376501426100731, "time": 1791710774.4140217}
+{"step": 200, "epoch": 3, "mode": "control", "loss": 0.1617226004600525, "time": 1791710777.0720818}
+{"step": 220, "epoch": 3, "mode": "control", "loss": 0.008217917755246162, "time": 1791710779.9096181}
+{"step": 237, "epoch": 3, "mode": "control", "macro_f1": 0.26448399342523643, "macro_p": 0.21616160519757135, "macro_r": 0.36157061851681044, "micro_f1": 0.3493888124342265, "micro_p": 0.2670792079207921, "micro_r": 0.50503159372806, "support": 4273, "tp": 2158, "fp": 5922, "fn": 2115, "n_pred": 8080, "n_labels": 12, "n_labels_with_support": 12, "macro_f1_labels_with_support": 0.26448399342523643, "time": 1791710785.8156998}
+{"step": 240, "epoch": 4, "mode": "control", "loss": 0.010121196508407593, "time": 1791710802.2922404}
+{"step": 260, "epoch": 4, "mode": "control", "loss": 0.035637710243463516, "time": 1791710804.827349}
+{"step": 280, "epoch": 4, "mode": "control", "loss": 0.009059603326022625, "time": 1791710807.5215578}
+{"step": 300, "epoch": 4, "mode": "control", "loss": 0.10134279727935791, "time": 1791710810.3446639}
+{"step": 316, "epoch": 4, "mode": "control", "macro_f1": 0.27562749702476574, "macro_p": 0.22996259121675014, "macro_r": 0.36993313625792407, "micro_f1": 0.36270128994182615, "micro_p": 0.2834739061676331, "micro_r": 0.5033934004212497, "support": 4273, "tp": 2151, "fp": 5437, "fn": 2122, "n_pred": 7588, "n_labels": 12, "n_labels_with_support": 12, "macro_f1_labels_with_support": 0.27562749702476574, "time": 1791710815.7761345}
+{"step": 320, "epoch": 5, "mode": "control", "loss": 0.029617799445986748, "time": 1791710832.320462}
+{"step": 340, "epoch": 5, "mode": "control", "loss": 0.020910894498229027, "time": 1791710835.096597}
+{"step": 360, "epoch": 5, "mode": "control", "loss": 0.011487260460853577, "time": 1791710837.7595553}
+{"step": 380, "epoch": 5, "mode": "control", "loss": 0.027317019179463387, "time": 1791710840.4100075}
+{"step": 395, "epoch": 5, "mode": "control", "macro_f1": 0.2774738101816932, "macro_p": 0.23928984694453523, "macro_r": 0.34780993965321305, "micro_f1": 0.3805366075488859, "micro_p": 0.31121689973222255, "micro_r": 0.4895857711209923, "support": 4273, "tp": 2092, "fp": 4630, "fn": 2181, "n_pred": 6722, "n_labels": 12, "n_labels_with_support": 12, "macro_f1_labels_with_support": 0.2774738101816932, "time": 1791710846.0403705}
+{"step": 400, "epoch": 6, "mode": "control", "loss": 0.0061403559520840645, "time": 1791710863.4602406}
+{"step": 420, "epoch": 6, "mode": "control", "loss": 0.01412801444530487, "time": 1791710866.1601996}
+{"step": 440, "epoch": 6, "mode": "control", "loss": 0.00578701077029109, "time": 1791710868.960052}
+{"step": 460, "epoch": 6, "mode": "control", "loss": 0.002575246151536703, "time": 1791710871.750807}
+{"step": 474, "epoch": 6, "mode": "control", "macro_f1": 0.2784062498559601, "macro_p": 0.24243099299955564, "macro_r": 0.34316509202457235, "micro_f1": 0.37889960294951786, "micro_p": 0.3178429817605075, "micro_r": 0.4689913409782354, "support": 4273, "tp": 2004, "fp": 4301, "fn": 2269, "n_pred": 6305, "n_labels": 12, "n_labels_with_support": 12, "macro_f1_labels_with_support": 0.2784062498559601, "time": 1791710877.1277294}
+{"step": 480, "epoch": 7, "mode": "control", "loss": 0.0015921458834782243, "time": 1791710894.0583968}
+{"step": 500, "epoch": 7, "mode": "control", "loss": 0.0032130121253430843, "time": 1791710896.6600664}
+{"step": 520, "epoch": 7, "mode": "control", "loss": 0.007928675040602684, "time": 1791710899.3738143}
+{"step": 540, "epoch": 7, "mode": "control", "loss": 0.0013465335359796882, "time": 1791710902.140439}
+{"step": 553, "epoch": 7, "mode": "control", "macro_f1": 0.2910910419319289, "macro_p": 0.2538148506418525, "macro_r": 0.35855094446478325, "micro_f1": 0.39241812892934225, "micro_p": 0.3275375939849624, "micro_r": 0.4893517435057337, "support": 4273, "tp": 2091, "fp": 4293, "fn": 2182, "n_pred": 6384, "n_labels": 12, "n_labels_with_support": 12, "macro_f1_labels_with_support": 0.2910910419319289, "time": 1791710907.0957031}
+{"step": 560, "epoch": 8, "mode": "control", "loss": 0.0008353186422027647, "time": 1791710923.8489697}
+{"step": 580, "epoch": 8, "mode": "control", "loss": 0.002868005307391286, "time": 1791710926.6041305}
+{"step": 600, "epoch": 8, "mode": "control", "loss": 0.006208043545484543, "time": 1791710929.4191597}
+{"step": 620, "epoch": 8, "mode": "control", "loss": 0.004457518458366394, "time": 1791710931.9728954}
+{"step": 632, "epoch": 8, "mode": "control", "macro_f1": 0.28446671755460484, "macro_p": 0.2511424607171164, "macro_r": 0.34531590972456233, "micro_f1": 0.3848934550989346, "micro_p": 0.3242506811989101, "micro_r": 0.4734378656681488, "support": 4273, "tp": 2023, "fp": 4216, "fn": 2250, "n_pred": 6239, "n_labels": 12, "n_labels_with_support": 12, "macro_f1_labels_with_support": 0.28446671755460484, "time": 1791710937.39934}
+{"step": 640, "epoch": 9, "mode": "control", "loss": 0.000384565006243065, "time": 1791710947.5911207}
+{"step": 660, "epoch": 9, "mode": "control", "loss": 0.0005592869129031897, "time": 1791710950.2720518}
+{"step": 680, "epoch": 9, "mode": "control", "loss": 0.008124974556267262, "time": 1791710953.071157}
+{"step": 700, "epoch": 9, "mode": "control", "loss": 0.00044028088450431824, "time": 1791710955.6389372}
+{"step": 711, "epoch": 9, "mode": "control", "macro_f1": 0.28674318392608295, "macro_p": 0.25222701097768935, "macro_r": 0.34875345665161256, "micro_f1": 0.3876769996172981, "micro_p": 0.32788477099854346, "micro_r": 0.47413994851392466, "support": 4273, "tp": 2026, "fp": 4153, "fn": 2247, "n_pred": 6179, "n_labels": 12, "n_labels_with_support": 12, "macro_f1_labels_with_support": 0.28674318392608295, "time": 1791710960.7255895}
+{"step": 720, "epoch": 10, "mode": "control", "loss": 0.006984822452068329, "time": 1791710970.209689}
+{"step": 740, "epoch": 10, "mode": "control", "loss": 0.00029098973027430475, "time": 1791710972.907488}
+{"step": 760, "epoch": 10, "mode": "control", "loss": 0.0002238588931504637, "time": 1791710975.5620275}
+{"step": 780, "epoch": 10, "mode": "control", "loss": 0.0019503451185300946, "time": 1791710978.395778}
+{"step": 790, "epoch": 10, "mode": "control", "macro_f1": 0.2883556551712347, "macro_p": 0.2556210584207353, "macro_r": 0.34895723629512326, "micro_f1": 0.389310775737768, "micro_p": 0.3303425774877651, "micro_r": 0.47390592089866607, "support": 4273, "tp": 2025, "fp": 4105, "fn": 2248, "n_pred": 6130, "n_labels": 12, "n_labels_with_support": 12, "macro_f1_labels_with_support": 0.2883556551712347, "time": 1791710983.1397743}
+{"step": 800, "epoch": 11, "mode": "control", "loss": 0.00021491556253749877, "time": 1791710992.7810664}
+{"step": 820, "epoch": 11, "mode": "control", "loss": 0.00019684956350829452, "time": 1791710995.5574381}
+{"step": 840, "epoch": 11, "mode": "control", "loss": 0.005087108816951513, "time": 1791710998.2180772}
+{"step": 860, "epoch": 11, "mode": "control", "loss": 0.0015596776502206922, "time": 1791711001.0601609}
+{"step": 869, "epoch": 11, "mode": "control", "macro_f1": 0.2859973083681346, "macro_p": 0.2535761693745006, "macro_r": 0.3456333248564945, "micro_f1": 0.38658701098477555, "micro_p": 0.3285831285831286, "micro_r": 0.46945939620875266, "support": 4273, "tp": 2006, "fp": 4099, "fn": 2267, "n_pred": 6105, "n_labels": 12, "n_labels_with_support": 12, "macro_f1_labels_with_support": 0.2859973083681346, "time": 1791711005.6946747}
+{"step": 880, "epoch": 12, "mode": "control", "loss": 0.00018031646322924644, "time": 1791711015.838297}
+{"step": 900, "epoch": 12, "mode": "control", "loss": 0.001024038065224886, "time": 1791711018.500272}
+{"step": 920, "epoch": 12, "mode": "control", "loss": 0.00041965508717112243, "time": 1791711021.15746}
+{"step": 940, "epoch": 12, "mode": "control", "loss": 0.0001450865383958444, "time": 1791711023.9564366}
+{"step": 948, "epoch": 12, "mode": "control", "macro_f1": 0.28153567199844187, "macro_p": 0.24711099021206065, "macro_r": 0.344497217457935, "micro_f1": 0.3802108061912449, "micro_p": 0.319910514541387, "micro_r": 0.46852328574771823, "support": 4273, "tp": 2002, "fp": 4256, "fn": 2271, "n_pred": 6258, "n_labels": 12, "n_labels_with_support": 12, "macro_f1_labels_with_support": 0.28153567199844187, "time": 1791711028.4683228}
+{"step": 960, "epoch": 13, "mode": "control", "loss": 0.008251198567450047, "time": 1791711036.713806}
+{"step": 980, "epoch": 13, "mode": "control", "loss": 0.00010000262409448624, "time": 1791711039.4409373}
+{"step": 1000, "epoch": 13, "mode": "control", "loss": 0.0006633471348322928, "time": 1791711042.2053316}
+{"step": 1020, "epoch": 13, "mode": "control", "loss": 0.0022941010538488626, "time": 1791711045.0690367}
+{"step": 1027, "epoch": 13, "mode": "control", "macro_f1": 0.28666626049533833, "macro_p": 0.25382409211461165, "macro_r": 0.346659506272228, "micro_f1": 0.3883532587736213, "micro_p": 0.3302180685358255, "micro_r": 0.47133161713082145, "support": 4273, "tp": 2014, "fp": 4085, "fn": 2259, "n_pred": 6099, "n_labels": 12, "n_labels_with_support": 12, "macro_f1_labels_with_support": 0.28666626049533833, "time": 1791711049.4804893}
+{"step": 1040, "epoch": 14, "mode": "control", "loss": 9.25601925700903e-05, "time": 1791711057.8303525}
+{"step": 1060, "epoch": 14, "mode": "control", "loss": 0.0004970956360921264, "time": 1791711060.4849865}
+{"step": 1080, "epoch": 14, "mode": "control", "loss": 0.00018556688155513257, "time": 1791711063.2082705}
+{"step": 1100, "epoch": 14, "mode": "control", "loss": 0.00016056456661317497, "time": 1791711065.9133205}
+{"step": 1106, "epoch": 14, "mode": "control", "macro_f1": 0.28308464048495036, "macro_p": 0.2519521730282818, "macro_r": 0.34019998544027746, "micro_f1": 0.3807047949162334, "micro_p": 0.32340912808768196, "micro_r": 0.4626725953662532, "support": 4273, "tp": 1977, "fp": 4136, "fn": 2296, "n_pred": 6113, "n_labels": 12, "n_labels_with_support": 12, "macro_f1_labels_with_support": 0.28308464048495036, "time": 1791711070.2408347}
+{"step": 1120, "epoch": 15, "mode": "control", "loss": 0.00032478049979545176, "time": 1791711079.3583932}
+{"step": 1140, "epoch": 15, "mode": "control", "loss": 0.0006984916399233043, "time": 1791711082.0670295}
+{"step": 1160, "epoch": 15, "mode": "control", "loss": 0.00012088420044165105, "time": 1791711084.7314382}
+{"step": 1180, "epoch": 15, "mode": "control", "loss": 0.0002029851748375222, "time": 1791711087.4145398}
+{"step": 1185, "epoch": 15, "mode": "control", "macro_f1": 0.2867443907426608, "macro_p": 0.2542034545127936, "macro_r": 0.3463708065936389, "micro_f1": 0.38693563880883763, "micro_p": 0.3281733746130031, "micro_r": 0.47133161713082145, "support": 4273, "tp": 2014, "fp": 4123, "fn": 2259, "n_pred": 6137, "n_labels": 12, "n_labels_with_support": 12, "macro_f1_labels_with_support": 0.2867443907426608, "time": 1791711091.613503}
+{"step": 1200, "epoch": 16, "mode": "control", "loss": 0.00027701506041921675, "time": 1791711100.9708176}
+{"step": 1220, "epoch": 16, "mode": "control", "loss": 0.0033836630173027515, "time": 1791711103.666112}
+{"step": 1240, "epoch": 16, "mode": "control", "loss": 0.0017041908577084541, "time": 1791711106.5448387}
+{"step": 1260, "epoch": 16, "mode": "control", "loss": 0.002602563239634037, "time": 1791711109.323572}
+{"step": 1264, "epoch": 16, "mode": "control", "macro_f1": 0.28571964763248275, "macro_p": 0.25345045938459965, "macro_r": 0.34484807259854583, "micro_f1": 0.38413521559588976, "micro_p": 0.3257328990228013, "micro_r": 0.46805523051720105, "support": 4273, "tp": 2000, "fp": 4140, "fn": 2273, "n_pred": 6140, "n_labels": 12, "n_labels_with_support": 12, "macro_f1_labels_with_support": 0.28571964763248275, "time": 1791711113.270301}
+{"step": 1280, "epoch": 17, "mode": "control", "loss": 0.0004890161799266934, "time": 1791711123.2195046}
+{"step": 1300, "epoch": 17, "mode": "control", "loss": 0.00016270983905997127, "time": 1791711125.9637926}
+{"step": 1320, "epoch": 17, "mode": "control", "loss": 0.0005186818307265639, "time": 1791711128.627882}
+{"step": 1340, "epoch": 17, "mode": "control", "loss": 0.0001535413321107626, "time": 1791711131.4364069}
+{"step": 1343, "epoch": 17, "mode": "control", "macro_f1": 0.2855542652598893, "macro_p": 0.25306879143563493, "macro_r": 0.34491910680745624, "micro_f1": 0.3853846153846154, "micro_p": 0.3270768728578423, "micro_r": 0.4689913409782354, "support": 4273, "tp": 2004, "fp": 4123, "fn": 2269, "n_pred": 6127, "n_labels": 12, "n_labels_with_support": 12, "macro_f1_labels_with_support": 0.2855542652598893, "time": 1791711135.2054288}
+{"step": 1360, "epoch": 18, "mode": "control", "loss": 7.912847650004551e-05, "time": 1791711145.7110949}
+{"step": 1380, "epoch": 18, "mode": "control", "loss": 0.0003485626366455108, "time": 1791711148.3926759}
+{"step": 1400, "epoch": 18, "mode": "control", "loss": 0.0002662875922396779, "time": 1791711151.0941632}
+{"step": 1420, "epoch": 18, "mode": "control", "loss": 0.0034125912934541702, "time": 1791711153.9720998}
+{"step": 1422, "epoch": 18, "mode": "control", "macro_f1": 0.28597717492613417, "macro_p": 0.2536860755541656, "macro_r": 0.3451815612227345, "micro_f1": 0.3860662047729022, "micro_p": 0.32783134499101163, "micro_r": 0.46945939620875266, "support": 4273, "tp": 2006, "fp": 4113, "fn": 2267, "n_pred": 6119, "n_labels": 12, "n_labels_with_support": 12, "macro_f1_labels_with_support": 0.28597717492613417, "time": 1791711157.4798217}
+{"step": 1440, "epoch": 19, "mode": "control", "loss": 0.0002623380278237164, "time": 1791711167.6940806}
+{"step": 1460, "epoch": 19, "mode": "control", "loss": 0.00011561969586182386, "time": 1791711170.416467}
+{"step": 1480, "epoch": 19, "mode": "control", "loss": 0.0001410173426847905, "time": 1791711173.1082308}
+{"step": 1500, "epoch": 19, "mode": "control", "loss": 5.4984906455501914e-05, "time": 1791711175.9585826}
+{"step": 1501, "epoch": 19, "mode": "control", "macro_f1": 0.2843802030914748, "macro_p": 0.2523497543817048, "macro_r": 0.34284223624019017, "micro_f1": 0.3851266737308544, "micro_p": 0.32727570399476097, "micro_r": 0.46782120290194246, "support": 4273, "tp": 1999, "fp": 4109, "fn": 2274, "n_pred": 6108, "n_labels": 12, "n_labels_with_support": 12, "macro_f1_labels_with_support": 0.2843802030914748, "time": 1791711179.4989665}
+{"step": 1520, "epoch": 20, "mode": "control", "loss": 9.990557009587064e-05, "time": 1791711189.6201541}
+{"step": 1540, "epoch": 20, "mode": "control", "loss": 0.0004761341551784426, "time": 1791711192.3486917}
+{"step": 1560, "epoch": 20, "mode": "control", "loss": 0.0014413256430998445, "time": 1791711195.1551816}
+{"step": 1580, "epoch": 20, "mode": "control", "loss": 0.00011744709627237171, "time": 1791711198.0003548}
+{"step": 1580, "epoch": 20, "mode": "control", "macro_f1": 0.28522172451175815, "macro_p": 0.25284317195681355, "macro_r": 0.3443894837747301, "micro_f1": 0.38479307025986526, "micro_p": 0.3267941801536701, "micro_r": 0.46782120290194246, "support": 4273, "tp": 1999, "fp": 4118, "fn": 2274, "n_pred": 6117, "n_labels": 12, "n_labels_with_support": 12, "macro_f1_labels_with_support": 0.28522172451175815, "time": 1791711201.404119}

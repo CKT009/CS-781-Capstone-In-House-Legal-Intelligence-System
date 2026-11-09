@@ -1,0 +1,19 @@
+{
+ "name": "gradual_tail",
+ "peft": "gradual",
+ "K": 1,
+ "keep": "tail",
+ "pool": "mean",
+ "best": {
+  "score": 0.7457705797400453,
+  "thr": 0.4749999999999999,
+  "step": 4000,
+  "epoch": 1.9801980198019802,
+  "at05": 0.7426761291805539
+ },
+ "dev_report": "macro-F1 0.7458  (P 0.7508  R 0.7469  acc 0.7467)  | class0 F1 0.7613 pred 1412/1252  class1 F1 0.7303 pred 1099/1259",
+ "trainable": 2305,
+ "total": 140659969,
+ "wall_min": 33.7,
+ "peak_vram_gb": 3.07
+}

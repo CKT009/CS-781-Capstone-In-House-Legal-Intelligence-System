@@ -1,0 +1,19 @@
+{
+ "name": "kd_half",
+ "peft": "distill",
+ "K": 1,
+ "keep": "tail",
+ "pool": "mean",
+ "best": {
+  "score": 0.7259784128659927,
+  "thr": 0.38999999999999996,
+  "step": 4040,
+  "epoch": 2.0,
+  "at05": 0.7152496811290099
+ },
+ "dev_report": "macro-F1 0.7260  (P 0.7260  R 0.7260  acc 0.7260)  | class0 F1 0.7233 pred 1234/1252  class1 F1 0.7287 pred 1277/1259",
+ "trainable": 76869121,
+ "total": 76869121,
+ "wall_min": 23.6,
+ "peak_vram_gb": 1.85
+}

@@ -1,0 +1,21 @@
+{
+  "name": "bitfit40_ff_s2",
+  "backbone": "../checkpoints/B_grown",
+  "peft": "bitfit",
+  "use_crf": true,
+  "doc_layers": 2,
+  "best": {
+    "macro_f1": null,
+    "macro_f1_supported": null,
+    "epoch": 40,
+    "final_fit": true
+  },
+  "final_fit": true,
+  "n_train_docs": 90,
+  "epochs": 40,
+  "wall_min": 51.94790078004201,
+  "trainable": 211408,
+  "total": 155046352,
+  "trainable_pct": 0.13635148281334603,
+  "peak_vram_mb": 2703.084032
+}

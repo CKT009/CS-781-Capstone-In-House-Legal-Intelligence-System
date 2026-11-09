@@ -1,0 +1,22 @@
+{
+  "name": "final15",
+  "backbone": "../checkpoints/B_encoder",
+  "peft": "lora",
+  "peft_kw": {
+    "r": 8,
+    "alpha": 16
+  },
+  "use_crf": false,
+  "best": {
+    "macro_f1": 0.8968963472736791,
+    "epoch": 15,
+    "step": 2355
+  },
+  "epochs": 15,
+  "steps": 2355,
+  "wall_min": 6.5,
+  "trainable": 314137,
+  "total": 98444569,
+  "trainable_pct": 0.31910038633009813,
+  "peak_vram_mb": 693.8
+}

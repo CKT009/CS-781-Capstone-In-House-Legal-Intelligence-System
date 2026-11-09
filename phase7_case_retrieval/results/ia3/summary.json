@@ -1,0 +1,26 @@
+{
+ "name": "ia3",
+ "peft": "ia3",
+ "peft_kw": {},
+ "K": 4,
+ "K_eval": 8,
+ "pool": "mean",
+ "best_step": 332,
+ "dev": {
+  "f1": 0.367982212340189,
+  "p": 0.400726392251816,
+  "r": 0.34018499486125386,
+  "hits": 331,
+  "r100": 0.7389516957862282
+ },
+ "date_filter": true,
+ "hardneg": true,
+ "trainable": 673537,
+ "total": 141331201,
+ "pct": 0.477,
+ "steps": 996,
+ "s_per_step": 4.74,
+ "wall_min": 85.3,
+ "peak_vram_gb": 12.99,
+ "submission": "PLM_interp7/subs/ia3.zip"
+}

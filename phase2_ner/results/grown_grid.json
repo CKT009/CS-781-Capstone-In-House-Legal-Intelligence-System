@@ -1,0 +1,104 @@
+{
+  "backbone": "../checkpoints/A_grown",
+  "epochs": 20,
+  "folds": {
+    "train": [
+      "fold1"
+    ],
+    "dev": [
+      "fold2"
+    ]
+  },
+  "rows": [
+    {
+      "method": "distill:kd",
+      "macro_f1": 0.3759331496093787,
+      "best_epoch": 11,
+      "epochs": null,
+      "trainable": 76229273,
+      "trainable_pct": null,
+      "wall_min": 9.5
+    },
+    {
+      "method": "adapter",
+      "macro_f1": 0.351644877481143,
+      "best_epoch": 9,
+      "epochs": 20,
+      "trainable": 2001945,
+      "trainable_pct": 1.428424617061625,
+      "wall_min": 9.9
+    },
+    {
+      "method": "qlora",
+      "macro_f1": 0.3274968291588018,
+      "best_epoch": 12,
+      "epochs": 20,
+      "trainable": 428825,
+      "trainable_pct": 0.34906732864685125,
+      "wall_min": 11.9
+    },
+    {
+      "method": "distill:control",
+      "macro_f1": 0.32202344482205675,
+      "best_epoch": 11,
+      "epochs": null,
+      "trainable": 76229273,
+      "trainable_pct": null,
+      "wall_min": 7.9
+    },
+    {
+      "method": "lora",
+      "macro_f1": 0.3205848733175901,
+      "best_epoch": 9,
+      "epochs": 20,
+      "trainable": 428825,
+      "trainable_pct": 0.3094479315401953,
+      "wall_min": 11.3
+    },
+    {
+      "method": "last4",
+      "macro_f1": 0.2782853946420176,
+      "best_epoch": 14,
+      "epochs": 20,
+      "trainable": 25191961,
+      "trainable_pct": 18.232869730250457,
+      "wall_min": 8.7
+    },
+    {
+      "method": "prompt",
+      "macro_f1": 0.24380508539501058,
+      "best_epoch": 17,
+      "epochs": 20,
+      "trainable": 34585,
+      "trainable_pct": 0.02502836940524308,
+      "wall_min": 9.3
+    },
+    {
+      "method": "bitfit",
+      "macro_f1": 0.23601534607242503,
+      "best_epoch": 19,
+      "epochs": 20,
+      "trainable": 50713,
+      "trainable_pct": 0.036703912118242456,
+      "wall_min": 11.7
+    },
+    {
+      "method": "prefix",
+      "macro_f1": 0.1752803549014104,
+      "best_epoch": 18,
+      "epochs": 20,
+      "trainable": 183065,
+      "trainable_pct": 0.13233773294999476,
+      "wall_min": 11.1
+    },
+    {
+      "method": "head_only",
+      "macro_f1": 0.12262703348432319,
+      "best_epoch": 20,
+      "epochs": 20,
+      "trainable": 19225,
+      "trainable_pct": 0.013914237187175108,
+      "wall_min": 8.1
+    }
+  ]
+}

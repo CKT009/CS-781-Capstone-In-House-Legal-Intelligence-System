@@ -1,0 +1,7 @@
+{
+  "name": "xenc_fused_w12_cit",
+  "method": "lexical ranker (runs/lex) blended with the Phase-1 cross-encoder (runs/xenc) at w=0.12 over the top 30, then citator promotion",
+  "dev_micro_f1_at_7": {"ltr": 0.4847, "xenc_fused_w30": 0.4747, "xenc_fused_w12": 0.4858, "xenc_fused_w12_cit": 0.4958},
+  "test_micro_f1_at_7": {"ltr": 0.4920, "xenc_fused_w30": 0.4666, "xenc_fused_w12": 0.4897, "xenc_fused_w12_cit": 0.5038},
+  "command": "python run_fuse_sub.py --w 0.12 --citator --out subs/xenc_fused_w12_cit.zip"
+}

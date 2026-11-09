@@ -1,0 +1,31 @@
+{
+ "name": "lastk_k4_f0",
+ "backbone": "../checkpoints/B_grown",
+ "ckpt": "best.pt",
+ "out_dir": "runs",
+ "peft": "last_k",
+ "peft_kw": {
+  "k": 6
+ },
+ "gradual_stages": 4,
+ "L": 1024,
+ "K": 4,
+ "keep": "ends",
+ "pool": "attn",
+ "epochs": 3.0,
+ "batch_docs": 8,
+ "grad_accum": 2,
+ "lr": 5e-05,
+ "head_lr": 0.001,
+ "e_lr_mult": 1.0,
+ "weight_decay": 0.01,
+ "warmup_frac": 0.06,
+ "grad_clip": 1.0,
+ "label_pw": "none",
+ "fold": 0,
+ "folds_file": "runs/lexical_kfold/folds.json",
+ "eval_every": 2700,
+ "max_train": 0,
+ "seed": 1337,
+ "device": "cuda"
+}

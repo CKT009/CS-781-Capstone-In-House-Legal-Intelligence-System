@@ -1,0 +1,19 @@
+{
+ "name": "adalora_e",
+ "peft": "adalora",
+ "K": 1,
+ "keep": "tail",
+ "pool": "mean",
+ "best": {
+  "score": 0.6949991783190551,
+  "thr": 0.48499999999999993,
+  "step": 4040,
+  "epoch": 2.0,
+  "at05": 0.6885937143043634
+ },
+ "dev_report": "macro-F1 0.6950  (P 0.6964  R 0.6954  acc 0.6953)  | class0 F1 0.7052 pred 1343/1252  class1 F1 0.6848 pred 1168/1259",
+ "trainable": 1330273,
+ "total": 141987937,
+ "wall_min": 42.5,
+ "peak_vram_gb": 1.4
+}

@@ -1,0 +1,18 @@
+{
+  "name": "lora_M",
+  "backbone": "../checkpoints/M_mamba",
+  "peft": "lora",
+  "use_crf": true,
+  "doc_layers": 2,
+  "best": {
+    "macro_f1": 0.3318344390705418,
+    "macro_f1_supported": 0.39216797344700394,
+    "epoch": 10
+  },
+  "epochs": 40,
+  "wall_min": 110.57133256196975,
+  "trainable": 913232,
+  "total": 126648896,
+  "trainable_pct": 0.7210737944371817,
+  "peak_vram_mb": 2910.631424
+}

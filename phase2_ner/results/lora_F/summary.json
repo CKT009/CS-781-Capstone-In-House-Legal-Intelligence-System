@@ -1,0 +1,22 @@
+{
+  "name": "lora_F",
+  "backbone": "../checkpoints/F_diffusion",
+  "peft": "lora",
+  "peft_kw": {
+    "r": 8,
+    "alpha": 16
+  },
+  "use_crf": false,
+  "best": {
+    "macro_f1": 0.06358488840186917,
+    "epoch": 18,
+    "step": 1422
+  },
+  "epochs": 20,
+  "steps": 1580,
+  "wall_min": 4.3,
+  "trainable": 142105,
+  "total": 50188825,
+  "trainable_pct": 0.28314071907441546,
+  "peak_vram_mb": 454.8
+}

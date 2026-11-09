@@ -1,0 +1,29 @@
+{
+  "name": "adapter_M_f2",
+  "backbone": "../checkpoints/M_mamba",
+  "peft": "adapter",
+  "train_folds": [
+    "fold1",
+    "fold2"
+  ],
+  "dev_folds": [
+    "fold2"
+  ],
+  "dev_contaminated": true,
+  "peft_kw": {
+    "bottleneck": 64
+  },
+  "use_crf": false,
+  "best": {
+    "macro_f1": 0.8745612109683973,
+    "epoch": 13,
+    "step": 2041
+  },
+  "epochs": 13,
+  "steps": 2041,
+  "wall_min": 18.6,
+  "trainable": 1743705,
+  "total": 102016585,
+  "trainable_pct": 1.7092367873321774,
+  "peak_vram_mb": 1076.0
+}

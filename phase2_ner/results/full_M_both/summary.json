@@ -1,0 +1,19 @@
+{
+  "name": "full_M_both",
+  "backbone": "../checkpoints/M_mamba",
+  "peft": "full",
+  "peft_kw": {},
+  "use_crf": false,
+  "best": {
+    "macro_f1": 0.9791637638493921,
+    "epoch": 12,
+    "step": 1884
+  },
+  "epochs": 12,
+  "steps": 1884,
+  "wall_min": 14.7,
+  "trainable": 100298505,
+  "total": 100298505,
+  "trainable_pct": 100.0,
+  "peak_vram_mb": 2275.3
+}

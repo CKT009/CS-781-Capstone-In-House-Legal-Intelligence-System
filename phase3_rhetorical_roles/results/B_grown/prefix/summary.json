@@ -1,0 +1,18 @@
+{
+  "name": "prefix",
+  "backbone": "../checkpoints/B_grown",
+  "peft": "prefix",
+  "use_crf": true,
+  "doc_layers": 2,
+  "best": {
+    "macro_f1": 0.2898897384819541,
+    "macro_f1_supported": 0.34259696366049125,
+    "epoch": 40
+  },
+  "epochs": 40,
+  "wall_min": 54.40432997544607,
+  "trainable": 452560,
+  "total": 155488720,
+  "trainable_pct": 0.29105648306835374,
+  "peak_vram_mb": 2696.462336
+}

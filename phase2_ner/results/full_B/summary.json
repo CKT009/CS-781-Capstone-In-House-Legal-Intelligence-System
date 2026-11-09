@@ -1,0 +1,19 @@
+{
+  "name": "full_B",
+  "backbone": "../checkpoints/B_encoder",
+  "peft": "full",
+  "peft_kw": {},
+  "use_crf": false,
+  "best": {
+    "macro_f1": 0.40878432362130024,
+    "epoch": 8,
+    "step": 632
+  },
+  "epochs": 20,
+  "steps": 1580,
+  "wall_min": 16.0,
+  "trainable": 98149657,
+  "total": 98149657,
+  "trainable_pct": 100.0,
+  "peak_vram_mb": 1854.7
+}

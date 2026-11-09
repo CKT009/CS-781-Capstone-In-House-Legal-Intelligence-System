@@ -1,0 +1,21 @@
+{
+  "name": "prompt_M",
+  "backbone": "../checkpoints/M_mamba",
+  "peft": "prompt",
+  "peft_kw": {
+    "n_prompt": 20
+  },
+  "use_crf": false,
+  "best": {
+    "macro_f1": 0.2232937199506471,
+    "epoch": 19,
+    "step": 1501
+  },
+  "epochs": 20,
+  "steps": 1580,
+  "wall_min": 8.9,
+  "trainable": 46105,
+  "total": 100318985,
+  "trainable_pct": 0.045958399599039,
+  "peak_vram_mb": 1973.9
+}

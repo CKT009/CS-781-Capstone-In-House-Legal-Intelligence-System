@@ -1,0 +1,12 @@
+{
+  "name": "distill_kd",
+  "mode": "kd",
+  "best": {
+    "macro_f1": 0.24614677798101411,
+    "macro_f1_supported": 0.29090073761392576,
+    "epoch": 20
+  },
+  "params": 92147728,
+  "teacher_params": 156830800,
+  "wall_min": 77.88720931212107
+}

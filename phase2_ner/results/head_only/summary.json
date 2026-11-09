@@ -1,0 +1,19 @@
+{
+  "name": "head_only",
+  "backbone": "../checkpoints/B_encoder",
+  "peft": "head_only",
+  "peft_kw": {},
+  "use_crf": false,
+  "best": {
+    "macro_f1": 0.21929293774287337,
+    "epoch": 11,
+    "step": 869
+  },
+  "epochs": 20,
+  "steps": 1580,
+  "wall_min": 3.2,
+  "trainable": 19225,
+  "total": 98149657,
+  "trainable_pct": 0.019587434727357224,
+  "peak_vram_mb": 1851.5
+}

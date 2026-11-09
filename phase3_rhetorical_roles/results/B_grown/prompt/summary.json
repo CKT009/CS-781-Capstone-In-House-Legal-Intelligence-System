@@ -1,0 +1,18 @@
+{
+  "name": "prompt",
+  "backbone": "../checkpoints/B_grown",
+  "peft": "prompt",
+  "use_crf": true,
+  "doc_layers": 2,
+  "best": {
+    "macro_f1": 0.32320804473500186,
+    "macro_f1_supported": 0.38197314377772945,
+    "epoch": 37
+  },
+  "epochs": 40,
+  "wall_min": 68.21561892032624,
+  "trainable": 25552,
+  "total": 155061712,
+  "trainable_pct": 0.01647860046843801,
+  "peak_vram_mb": 3027.538944
+}

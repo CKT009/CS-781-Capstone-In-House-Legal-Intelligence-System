@@ -1,0 +1,19 @@
+{
+  "name": "bitfit_B",
+  "backbone": "../checkpoints/B_encoder",
+  "peft": "bitfit",
+  "peft_kw": {},
+  "use_crf": false,
+  "best": {
+    "macro_f1": 0.3156042425151593,
+    "epoch": 16,
+    "step": 1264
+  },
+  "epochs": 20,
+  "steps": 1580,
+  "wall_min": 7.5,
+  "trainable": 140569,
+  "total": 98149657,
+  "trainable_pct": 0.1432190435469377,
+  "peak_vram_mb": 1854.7
+}

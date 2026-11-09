@@ -1,0 +1,20 @@
+{
+ "name": "kd_half",
+ "peft": "distill",
+ "K": 4,
+ "keep": "ends",
+ "pool": "attn",
+ "best_step": 8000,
+ "dev": {
+  "global_thr": 0.16999999999999998,
+  "macro_f1_global": 0.41057409142614804,
+  "macro_f1_perlabel": 0.4325425749984514,
+  "macro_f1_crossfit": 0.41374403643020063,
+  "micro_f1": 0.526423771597183,
+  "subset_acc": 0.06109419506924663
+ },
+ "trainable": 77057637,
+ "total": 77057637,
+ "wall_min": 74.2,
+ "peak_vram_gb": 2.58
+}

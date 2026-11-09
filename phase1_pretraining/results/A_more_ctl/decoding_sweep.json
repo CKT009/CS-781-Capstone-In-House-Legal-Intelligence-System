@@ -1,0 +1,73 @@
+{
+  "ckpt": "runs/A_more_ctl/best.pt",
+  "step": 1600,
+  "n": 174,
+  "sigma": 0.0009183520053924033,
+  "threshold": 0.0018367040107848066,
+  "baseline": {
+    "no_repeat_ngram": 4,
+    "repetition_penalty": 1.15,
+    "temperature": 0.8,
+    "top_p": 0.92,
+    "top_k": 50
+  },
+  "chosen": {
+    "no_repeat_ngram": 4,
+    "repetition_penalty": 1.15,
+    "temperature": 0.8,
+    "top_p": 0.92,
+    "top_k": 50
+  },
+  "baseline_score": 0.8250172336896261,
+  "chosen_score": 0.8250172336896261,
+  "results": [
+    {
+      "no_repeat_ngram": 4,
+      "repetition_penalty": 1.15,
+      "temperature": 0.8,
+      "top_p": 0.92,
+      "top_k": 50,
+      "seed": 0,
+      "bertscore_f1": 0.8250425457954407,
+      "rougeL": 0.1718216741112967,
+      "bleu4": 0.025025918170961912,
+      "distinct4": 0.9992966788113866,
+      "mean_words": 126.67241379310344,
+      "min_words": 73,
+      "gen_s": 109.2,
+      "stage": "noise"
+    },
+    {
+      "no_repeat_ngram": 4,
+      "repetition_penalty": 1.15,
+      "temperature": 0.8,
+      "top_p": 0.92,
+      "top_k": 50,
+      "seed": 1,
+      "bertscore_f1": 0.8240864872932434,
+      "rougeL": 0.1714093943444309,
+      "bleu4": 0.024025528433051484,
+      "distinct4": 0.9994007789493682,
+      "mean_words": 125.87931034482759,
+      "min_words": 60,
+      "gen_s": 108.7,
+      "stage": "noise"
+    },
+    {
+      "no_repeat_ngram": 4,
+      "repetition_penalty": 1.15,
+      "temperature": 0.8,
+      "top_p": 0.92,
+      "top_k": 50,
+      "seed": 2,
+      "bertscore_f1": 0.8259226679801941,
+      "rougeL": 0.17234414872472809,
+      "bleu4": 0.02298506148037881,
+      "distinct4": 0.9993103448275861,
+      "mean_words": 126.37931034482759,
+      "min_words": 67,
+      "gen_s": 109.1,
+      "stage": "noise"
+    }
+  ]
+}

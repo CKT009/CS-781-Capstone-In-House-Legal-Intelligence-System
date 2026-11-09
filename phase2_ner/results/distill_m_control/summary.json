@@ -1,0 +1,12 @@
+{
+  "name": "distill_m_control",
+  "mode": "control",
+  "best": {
+    "macro_f1": 0.2910910419319289,
+    "epoch": 7,
+    "step": 553
+  },
+  "params": 62506153,
+  "teacher_params": 102016585,
+  "wall_min": 8.3
+}

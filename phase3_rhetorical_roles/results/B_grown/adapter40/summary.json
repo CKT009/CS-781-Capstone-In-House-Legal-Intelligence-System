@@ -1,0 +1,18 @@
+{
+  "name": "adapter40",
+  "backbone": "../checkpoints/B_grown",
+  "peft": "adapter",
+  "use_crf": true,
+  "doc_layers": 2,
+  "best": {
+    "macro_f1": 0.3918854250742073,
+    "macro_f1_supported": 0.46313732054224505,
+    "epoch": 21
+  },
+  "epochs": 40,
+  "wall_min": 59.93544282515844,
+  "trainable": 1794640,
+  "total": 156830800,
+  "trainable_pct": 1.1443160399615382,
+  "peak_vram_mb": 2722.934784
+}

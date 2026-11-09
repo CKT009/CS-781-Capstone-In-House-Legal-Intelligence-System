@@ -1,0 +1,20 @@
+{
+ "name": "lastk_k4_f0",
+ "peft": "last_k",
+ "K": 4,
+ "keep": "ends",
+ "pool": "attn",
+ "best_step": 7941,
+ "dev": {
+  "global_thr": 0.19,
+  "macro_f1_global": 0.42073254494501994,
+  "macro_f1_perlabel": 0.438385258993168,
+  "macro_f1_crossfit": 0.41944073891445355,
+  "micro_f1": 0.5348760718900505,
+  "subset_acc": 0.07490318314914518
+ },
+ "trainable": 42719589,
+ "total": 140848485,
+ "wall_min": 60.6,
+ "peak_vram_gb": 2.1
+}

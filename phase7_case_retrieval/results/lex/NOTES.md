@@ -1,0 +1,197 @@
+# lex agent NOTES
+- Monday 26 October 2026 06:01:45 PM IST start: fresh
+- parse.py written; parsed_{split}.json written (first pass)
+- 10-26 18:08 parse train: {"n": 4320, "lb": 2249, "header": 1855, "None": 93, "cue": 123, "exact_rate": 0.4579, "any_rate": 0.9785}
+- 10-26 18:08 parse dev: {"n": 1023, "lb": 425, "header": 559, "None": 10, "cue": 29, "exact_rate": 0.5748, "any_rate": 0.9902}
+- 10-26 18:09 parse test: {"n": 1727, "lb": 815, "header": 821, "cue": 54, "None": 37, "exact_rate": 0.5067, "any_rate": 0.9786}
+- 10-26 18:09 dates.json: 5698 docs
+- 10-26 18:09 temporal train mode=any: pool removed 0.436, relevant kept 0.9139 (4851/5308)
+- 10-26 18:09 temporal train mode=tol1: pool removed 0.422, relevant kept 0.9314 (4944/5308)
+- 10-26 18:09 temporal train mode=exactq: pool removed 0.145, relevant kept 0.9968 (5291/5308)
+- 10-26 18:09 temporal train mode=exact_both: pool removed 0.096, relevant kept 0.9991 (5303/5308)
+- 10-26 18:09 temporal train violations by (q_src,c_src): {('lb', 'lb'): 197, ('lb', 'header'): 183, ('header', 'lb'): 9, ('lb', 'cue'): 60, ('cue', 'header'): 3, ('header', 'cue'): 1, ('cue', 'lb'): 3, ('cue', 'cue'): 1}
+- 10-26 18:09 temporal dev mode=any: pool removed 0.445, relevant kept 0.9250 (900/973)
+- 10-26 18:09 temporal dev mode=tol1: pool removed 0.429, relevant kept 0.9332 (908/973)
+- 10-26 18:09 temporal dev mode=exactq: pool removed 0.160, relevant kept 0.9979 (971/973)
+- 10-26 18:09 temporal dev mode=exact_both: pool removed 0.119, relevant kept 0.9990 (972/973)
+- 10-26 18:09 temporal dev violations by (q_src,c_src): {('header', 'cue'): 1, ('lb', 'lb'): 27, ('lb', 'header'): 35, ('lb', 'cue'): 9, ('header', 'lb'): 1}
+- DATES: header 45-55%, cue ~3%, rest = lower bound (second-latest mention). any-date 97.9-99.0%. Exact rate only 46/57/51% (train/dev/test) -- the rest have NO header at all (Indian-Kanoon style), so >95% EXACT is impossible; LB is the substitute.
+- TEMPORAL: naive drop c>q: removes 44% pool but keeps only 91-92% relevant (lb queries underestimate). SAFE rule 'exactq' (drop only when query date exact; c date is lb so c_lb>q => c>q): removes 14.5%/16.0% pool (train/dev), keeps 99.68%/99.79% relevant. Use exactq as the hard filter; year-diff as LTR feature.
+- NEXT: pcr/lexical.py (BM25 sparse, fields, statute jaccard, popularity, bench), then run_lex.py signals / fuse
+- 10-26 18:14 tune bm25[full] on TRAIN: F1 0.2336 k1=3.0 b=1.0 qw=log
+- 10-26 18:14 tune bm25[head] on TRAIN: F1 0.0961 k1=3.0 b=1.0 qw=log
+- 10-26 18:14 tune bm25[act] on TRAIN: F1 0.1204 k1=1.6 b=1.0 qw=bin
+- 10-26 18:14 tune bm25[first] on TRAIN: F1 0.1561 k1=3.0 b=1.0 qw=log
+- 10-26 18:15 dev signal bm25_full      temporal=none   micro-F1@7 0.3102 | P@7 0.3378 | R@7 0.2867
+- 10-26 18:15 dev signal bm25_full      temporal=exactq micro-F1@7 0.3280 | P@7 0.3571 | R@7 0.3032
+- 10-26 18:15 dev signal bm25_head      temporal=none   micro-F1@7 0.1501 | P@7 0.1634 | R@7 0.1387
+- 10-26 18:15 dev signal bm25_head      temporal=exactq micro-F1@7 0.1634 | P@7 0.1780 | R@7 0.1511
+- 10-26 18:15 dev signal bm25_act       temporal=none   micro-F1@7 0.1946 | P@7 0.2119 | R@7 0.1799
+- 10-26 18:15 dev signal bm25_act       temporal=exactq micro-F1@7 0.2123 | P@7 0.2312 | R@7 0.1963
+- 10-26 18:15 dev signal bm25_first     temporal=none   micro-F1@7 0.2435 | P@7 0.2651 | R@7 0.2251
+- 10-26 18:15 dev signal bm25_first     temporal=exactq micro-F1@7 0.2646 | P@7 0.2881 | R@7 0.2446
+- 10-26 18:15 dev signal statute_jac    temporal=none   micro-F1@7 0.2112 | P@7 0.2300 | R@7 0.1953
+- 10-26 18:15 dev signal statute_jac    temporal=exactq micro-F1@7 0.2368 | P@7 0.2579 | R@7 0.2189
+- 10-26 18:15 dev signal statute_idf    temporal=none   micro-F1@7 0.2023 | P@7 0.2203 | R@7 0.1871
+- 10-26 18:15 dev signal statute_idf    temporal=exactq micro-F1@7 0.2335 | P@7 0.2542 | R@7 0.2158
+- 10-26 18:15 dev signal acts_jac       temporal=none   micro-F1@7 0.1790 | P@7 0.1949 | R@7 0.1655
+- 10-26 18:15 dev signal acts_jac       temporal=exactq micro-F1@7 0.2012 | P@7 0.2191 | R@7 0.1860
+- 10-26 18:15 dev signal actfield_jac   temporal=none   micro-F1@7 0.2935 | P@7 0.3196 | R@7 0.2713
+- 10-26 18:15 dev signal actfield_jac   temporal=exactq micro-F1@7 0.3213 | P@7 0.3499 | R@7 0.2970
+- 10-26 18:15 dev signal popularity     temporal=none   micro-F1@7 0.0122 | P@7 0.0133 | R@7 0.0113
+- 10-26 18:15 dev signal popularity     temporal=exactq micro-F1@7 0.0178 | P@7 0.0194 | R@7 0.0164
+- 10-26 18:15 dev signal bench_jac      temporal=none   micro-F1@7 0.2357 | P@7 0.2567 | R@7 0.2179
+- 10-26 18:15 dev signal bench_jac      temporal=exactq micro-F1@7 0.2557 | P@7 0.2785 | R@7 0.2364
+- signals stage ran (first grid hit edge k1=3,b=1): dev bm25_full 0.310/0.328(exactq); actfield_jac (tie->bm25) 0.321; popularity ~random 0.012. Extending k1 grid.
+- 10-26 18:18 tune bm25[full] on TRAIN: F1 0.3004 k1=20.0 b=1.0 qw=log
+- 10-26 18:18 tune bm25[head] on TRAIN: F1 0.0961 k1=3.0 b=1.0 qw=log
+- 10-26 18:18 tune bm25[act] on TRAIN: F1 0.1204 k1=1.6 b=1.0 qw=bin
+- 10-26 18:19 tune bm25[first] on TRAIN: F1 0.1561 k1=3.0 b=1.0 qw=log
+- 10-26 18:19 dev signal bm25_full      temporal=none   micro-F1@7 0.4002 | P@7 0.4358 | R@7 0.3700
+- 10-26 18:19 dev signal bm25_full      temporal=exactq micro-F1@7 0.4269 | P@7 0.4649 | R@7 0.3947
+- 10-26 18:19 dev signal bm25_head      temporal=none   micro-F1@7 0.1501 | P@7 0.1634 | R@7 0.1387
+- 10-26 18:19 dev signal bm25_head      temporal=exactq micro-F1@7 0.1634 | P@7 0.1780 | R@7 0.1511
+- 10-26 18:19 dev signal bm25_act       temporal=none   micro-F1@7 0.1946 | P@7 0.2119 | R@7 0.1799
+- 10-26 18:19 dev signal bm25_act       temporal=exactq micro-F1@7 0.2123 | P@7 0.2312 | R@7 0.1963
+- 10-26 18:19 dev signal bm25_first     temporal=none   micro-F1@7 0.2435 | P@7 0.2651 | R@7 0.2251
+- 10-26 18:19 dev signal bm25_first     temporal=exactq micro-F1@7 0.2646 | P@7 0.2881 | R@7 0.2446
+- 10-26 18:19 dev signal statute_jac    temporal=none   micro-F1@7 0.2190 | P@7 0.2385 | R@7 0.2025
+- 10-26 18:19 dev signal statute_jac    temporal=exactq micro-F1@7 0.2457 | P@7 0.2676 | R@7 0.2271
+- 10-26 18:19 dev signal statute_idf    temporal=none   micro-F1@7 0.2123 | P@7 0.2312 | R@7 0.1963
+- 10-26 18:19 dev signal statute_idf    temporal=exactq micro-F1@7 0.2479 | P@7 0.2700 | R@7 0.2292
+- 10-26 18:19 dev signal acts_jac       temporal=none   micro-F1@7 0.1812 | P@7 0.1973 | R@7 0.1675
+- 10-26 18:19 dev signal acts_jac       temporal=exactq micro-F1@7 0.2046 | P@7 0.2228 | R@7 0.1891
+- 10-26 18:19 dev signal actfield_jac   temporal=none   micro-F1@7 0.3702 | P@7 0.4031 | R@7 0.3422
+- 10-26 18:19 dev signal actfield_jac   temporal=exactq micro-F1@7 0.4047 | P@7 0.4407 | R@7 0.3741
+- 10-26 18:19 dev signal popularity     temporal=none   micro-F1@7 0.0122 | P@7 0.0133 | R@7 0.0113
+- 10-26 18:19 dev signal popularity     temporal=exactq micro-F1@7 0.0178 | P@7 0.0194 | R@7 0.0164
+- 10-26 18:19 dev signal bench_jac      temporal=none   micro-F1@7 0.2924 | P@7 0.3184 | R@7 0.2703
+- 10-26 18:19 dev signal bench_jac      temporal=exactq micro-F1@7 0.3224 | P@7 0.3511 | R@7 0.2980
+- BIG: BM25 wants b=1.0 and huge k1 (20): dev full 0.400/0.427(exactq). Word n-gram shingle BM25 even better: bigram k1=20,b=1 dev 0.439, trigram 0.42-0.43 (no temporal). Train: tri 0.344 > bi 0.337 > uni 0.300. Adding bi/tri fields to run_lex, then fuse stage (RRF + HGB LTR, 5-fold OOF on train for the exported ltr score).
+- 10-26 18:27 tune bm25[full] on TRAIN: F1 0.3102 k1=50.0 b=1.0 qw=bin
+- 10-26 18:27 tune bm25[head] on TRAIN: F1 0.0961 k1=3.0 b=1.0 qw=log
+- 10-26 18:27 tune bm25[act] on TRAIN: F1 0.1204 k1=1.6 b=1.0 qw=bin
+- 10-26 18:28 tune bm25[first] on TRAIN: F1 0.1561 k1=3.0 b=1.0 qw=log
+- 10-26 18:29 tune bm25[bi] on TRAIN: F1 0.3377 k1=5.0 b=1.0 qw=log
+- 10-26 18:30 tune bm25[tri] on TRAIN: F1 0.3522 k1=5.0 b=1.0 qw=log
+- 10-26 18:30 dev signal bm25_full      temporal=none   micro-F1@7 0.4058 | P@7 0.4419 | R@7 0.3751
+- 10-26 18:30 dev signal bm25_full      temporal=exactq micro-F1@7 0.4225 | P@7 0.4600 | R@7 0.3905
+- 10-26 18:30 dev signal bm25_head      temporal=none   micro-F1@7 0.1501 | P@7 0.1634 | R@7 0.1387
+- 10-26 18:30 dev signal bm25_head      temporal=exactq micro-F1@7 0.1634 | P@7 0.1780 | R@7 0.1511
+- 10-26 18:30 dev signal bm25_act       temporal=none   micro-F1@7 0.1946 | P@7 0.2119 | R@7 0.1799
+- 10-26 18:30 dev signal bm25_act       temporal=exactq micro-F1@7 0.2123 | P@7 0.2312 | R@7 0.1963
+- 10-26 18:30 dev signal bm25_first     temporal=none   micro-F1@7 0.2435 | P@7 0.2651 | R@7 0.2251
+- 10-26 18:30 dev signal bm25_first     temporal=exactq micro-F1@7 0.2646 | P@7 0.2881 | R@7 0.2446
+- 10-26 18:30 dev signal bm25_bi        temporal=none   micro-F1@7 0.4369 | P@7 0.4758 | R@7 0.4039
+- 10-26 18:30 dev signal bm25_bi        temporal=exactq micro-F1@7 0.4614 | P@7 0.5024 | R@7 0.4265
+- 10-26 18:30 dev signal bm25_tri       temporal=none   micro-F1@7 0.4414 | P@7 0.4806 | R@7 0.4080
+- 10-26 18:30 dev signal bm25_tri       temporal=exactq micro-F1@7 0.4625 | P@7 0.5036 | R@7 0.4275
+- 10-26 18:30 dev signal statute_jac    temporal=none   micro-F1@7 0.2201 | P@7 0.2397 | R@7 0.2035
+- 10-26 18:30 dev signal statute_jac    temporal=exactq micro-F1@7 0.2479 | P@7 0.2700 | R@7 0.2292
+- 10-26 18:30 dev signal statute_idf    temporal=none   micro-F1@7 0.2168 | P@7 0.2361 | R@7 0.2004
+- 10-26 18:30 dev signal statute_idf    temporal=exactq micro-F1@7 0.2479 | P@7 0.2700 | R@7 0.2292
+- 10-26 18:30 dev signal acts_jac       temporal=none   micro-F1@7 0.1845 | P@7 0.2010 | R@7 0.1706
+- 10-26 18:30 dev signal acts_jac       temporal=exactq micro-F1@7 0.2068 | P@7 0.2252 | R@7 0.1912
+- 10-26 18:30 dev signal actfield_jac   temporal=none   micro-F1@7 0.3713 | P@7 0.4044 | R@7 0.3433
+- 10-26 18:30 dev signal actfield_jac   temporal=exactq micro-F1@7 0.4002 | P@7 0.4358 | R@7 0.3700
+- 10-26 18:30 dev signal popularity     temporal=none   micro-F1@7 0.0122 | P@7 0.0133 | R@7 0.0113
+- 10-26 18:30 dev signal popularity     temporal=exactq micro-F1@7 0.0178 | P@7 0.0194 | R@7 0.0164
+- 10-26 18:30 dev signal bench_jac      temporal=none   micro-F1@7 0.2957 | P@7 0.3220 | R@7 0.2734
+- 10-26 18:30 dev signal bench_jac      temporal=exactq micro-F1@7 0.3235 | P@7 0.3523 | R@7 0.2991
+- signals re-run with shingles: dev tri 0.441/0.463(exactq), bi 0.437/0.461, full(k1=50,bin) 0.406/0.423. Params in bm25_params.json. NEXT: python run_lex.py fuse (log logs/lex_fuse.log)
+- fixed statute parser (sub-clause digits leaked: 19(1)->{19,1}; section->act attachment). Re-running: parse temporal signals fuse -> logs/lex_all.log
+- 10-26 18:32 parse train: {"n": 4320, "lb": 2249, "header": 1855, "None": 93, "cue": 123, "exact_rate": 0.4579, "any_rate": 0.9785}
+- 10-26 18:32 parse dev: {"n": 1023, "lb": 425, "header": 559, "None": 10, "cue": 29, "exact_rate": 0.5748, "any_rate": 0.9902}
+- 10-26 18:33 parse test: {"n": 1727, "lb": 815, "header": 821, "cue": 54, "None": 37, "exact_rate": 0.5067, "any_rate": 0.9786}
+- 10-26 18:33 dates.json: 5698 docs
+- 10-26 18:33 temporal train mode=any: pool removed 0.436, relevant kept 0.9139 (4851/5308)
+- 10-26 18:33 temporal train mode=tol1: pool removed 0.422, relevant kept 0.9314 (4944/5308)
+- 10-26 18:33 temporal train mode=exactq: pool removed 0.145, relevant kept 0.9968 (5291/5308)
+- 10-26 18:33 temporal train mode=exact_both: pool removed 0.096, relevant kept 0.9991 (5303/5308)
+- 10-26 18:33 temporal train violations by (q_src,c_src): {('lb', 'lb'): 197, ('lb', 'header'): 183, ('header', 'lb'): 9, ('lb', 'cue'): 60, ('cue', 'header'): 3, ('header', 'cue'): 1, ('cue', 'lb'): 3, ('cue', 'cue'): 1}
+- 10-26 18:33 temporal dev mode=any: pool removed 0.445, relevant kept 0.9250 (900/973)
+- 10-26 18:33 temporal dev mode=tol1: pool removed 0.429, relevant kept 0.9332 (908/973)
+- 10-26 18:33 temporal dev mode=exactq: pool removed 0.160, relevant kept 0.9979 (971/973)
+- 10-26 18:33 temporal dev mode=exact_both: pool removed 0.119, relevant kept 0.9990 (972/973)
+- 10-26 18:33 temporal dev violations by (q_src,c_src): {('header', 'cue'): 1, ('lb', 'lb'): 27, ('lb', 'header'): 35, ('lb', 'cue'): 9, ('header', 'lb'): 1}
+- failure analysis (dev, tri+exactq 0.4625): header queries F1 .499 vs headerless .428; recall lowest for headerless query -> header candidate (.336). gold 1-2: P .17 (fixed-7 cap); 6/118 zero-hit. Shared top trigrams are quoted statutory phrases / legal tests ('expended wholly exclusively purpose', 'time begins run', 'wholesale cash price').
+- 10-26 18:36 tune bm25[full] on TRAIN: F1 0.3102 k1=50.0 b=1.0 qw=bin
+- 10-26 18:37 tune bm25[head] on TRAIN: F1 0.0961 k1=3.0 b=1.0 qw=log
+- 10-26 18:37 tune bm25[act] on TRAIN: F1 0.1186 k1=0.9 b=1.0 qw=log
+- 10-26 18:37 tune bm25[first] on TRAIN: F1 0.1561 k1=3.0 b=1.0 qw=log
+- 10-26 18:38 tune bm25[bi] on TRAIN: F1 0.3377 k1=5.0 b=1.0 qw=log
+- 10-26 18:39 tune bm25[tri] on TRAIN: F1 0.3522 k1=5.0 b=1.0 qw=log
+- 10-26 18:39 dev signal bm25_full      temporal=none   micro-F1@7 0.4058 | P@7 0.4419 | R@7 0.3751
+- 10-26 18:39 dev signal bm25_full      temporal=exactq micro-F1@7 0.4225 | P@7 0.4600 | R@7 0.3905
+- 10-26 18:39 dev signal bm25_head      temporal=none   micro-F1@7 0.1501 | P@7 0.1634 | R@7 0.1387
+- 10-26 18:39 dev signal bm25_head      temporal=exactq micro-F1@7 0.1634 | P@7 0.1780 | R@7 0.1511
+- 10-26 18:39 dev signal bm25_act       temporal=none   micro-F1@7 0.1979 | P@7 0.2155 | R@7 0.1829
+- 10-26 18:39 dev signal bm25_act       temporal=exactq micro-F1@7 0.2212 | P@7 0.2409 | R@7 0.2045
+- 10-26 18:39 dev signal bm25_first     temporal=none   micro-F1@7 0.2435 | P@7 0.2651 | R@7 0.2251
+- 10-26 18:39 dev signal bm25_first     temporal=exactq micro-F1@7 0.2646 | P@7 0.2881 | R@7 0.2446
+- 10-26 18:39 dev signal bm25_bi        temporal=none   micro-F1@7 0.4369 | P@7 0.4758 | R@7 0.4039
+- 10-26 18:39 dev signal bm25_bi        temporal=exactq micro-F1@7 0.4614 | P@7 0.5024 | R@7 0.4265
+- 10-26 18:39 dev signal bm25_tri       temporal=none   micro-F1@7 0.4414 | P@7 0.4806 | R@7 0.4080
+- 10-26 18:39 dev signal bm25_tri       temporal=exactq micro-F1@7 0.4625 | P@7 0.5036 | R@7 0.4275
+- 10-26 18:39 dev signal statute_jac    temporal=none   micro-F1@7 0.2401 | P@7 0.2615 | R@7 0.2220
+- 10-26 18:39 dev signal statute_jac    temporal=exactq micro-F1@7 0.2657 | P@7 0.2893 | R@7 0.2456
+- 10-26 18:39 dev signal statute_idf    temporal=none   micro-F1@7 0.2412 | P@7 0.2627 | R@7 0.2230
+- 10-26 18:39 dev signal statute_idf    temporal=exactq micro-F1@7 0.2713 | P@7 0.2954 | R@7 0.2508
+- 10-26 18:39 dev signal acts_jac       temporal=none   micro-F1@7 0.1901 | P@7 0.2070 | R@7 0.1757
+- 10-26 18:39 dev signal acts_jac       temporal=exactq micro-F1@7 0.2123 | P@7 0.2312 | R@7 0.1963
+- 10-26 18:39 dev signal actfield_jac   temporal=none   micro-F1@7 0.3747 | P@7 0.4080 | R@7 0.3464
+- 10-26 18:39 dev signal actfield_jac   temporal=exactq micro-F1@7 0.4047 | P@7 0.4407 | R@7 0.3741
+- 10-26 18:39 dev signal popularity     temporal=none   micro-F1@7 0.0122 | P@7 0.0133 | R@7 0.0113
+- 10-26 18:39 dev signal popularity     temporal=exactq micro-F1@7 0.0178 | P@7 0.0194 | R@7 0.0164
+- 10-26 18:39 dev signal bench_jac      temporal=none   micro-F1@7 0.2957 | P@7 0.3220 | R@7 0.2734
+- 10-26 18:39 dev signal bench_jac      temporal=exactq micro-F1@7 0.3235 | P@7 0.3523 | R@7 0.2991
+- 10-26 18:41 fuse: tables built train (165400, 36), dev (23600, 36), test (47400, 36)
+- 10-26 18:41 fuse: train recall@200 of temporal-filtered bm25_full candidates: 0.8048
+- 10-26 18:41 fuse: dev recall@200 of temporal-filtered bm25_full candidates: 0.8253
+- signals done after parser fix (actfield_jac 0.405 exactq w/ bm25 tie-break; statute_idf .271). fuse running; recall@200 bm25_full cands train .805 dev .825
+- 10-26 18:44 RRF bm25_bi+bm25_tri: train F1 0.3765 | dev micro-F1@7 0.4636 | P@7 0.5048 | R@7 0.4286
+- 10-26 18:44 RRF bm25_bi+bm25_tri+actfield_jac: train F1 0.3684 | dev micro-F1@7 0.4580 | P@7 0.4988 | R@7 0.4234
+- 10-26 18:44 RRF bm25_full+bm25_bi+bm25_tri: train F1 0.3678 | dev micro-F1@7 0.4558 | P@7 0.4964 | R@7 0.4214
+- 10-26 18:44 RRF(fixed) bm25_full+bm25_bi+bm25_tri: train F1 0.3678 | dev micro-F1@7 0.4558 | P@7 0.4964 | R@7 0.4214
+- 10-26 18:44 RRF(fixed) bm25_bi+actfield_jac: train F1 0.3509 | dev micro-F1@7 0.4480 | P@7 0.4879 | R@7 0.4142
+- 10-26 18:44 RRF(fixed) bm25_full+bm25_bi+bm25_tri+actfield_jac: train F1 0.3642 | dev micro-F1@7 0.4558 | P@7 0.4964 | R@7 0.4214
+- 10-26 18:44 LTR HGB (train -> dev, 36 feats): dev micro-F1@7 0.3202 | P@7 0.3487 | R@7 0.2960
+- 10-26 18:44 LTR HGB train 5-fold OOF: micro-F1@7 0.4962 | P@7 0.4756 | R@7 0.5187
+- 10-26 18:45 LTR permutation importance (dev F1 drop): bm25_tri=+0.1175, c_year=+0.0348, bm25_tri_rank=+0.0326, rev_rank=+0.0204, bm25_bi_rank=+0.0148, year_diff_qmax=+0.0148, year_diff=+0.0126, bm25_full=+0.0122, bm25_full_rel=+0.0093, bm25_act_rank=+0.0067, bm25_full_rank=+0.0059, c_date_exact=+0.0059, bm25_tri_rel=+0.0048, q_len=+0.0030, bm25_head=+0.0022, bm25_first_rel=+0.0022, q_year=+0.0015, bm25_bi=+0.0015, actfield_jac=+0.0011, acts_jac=+0.0011, statute_jac=+0.0007, q_date_exact=+0.0004, bench_jac=+0.0000, bm25_head_rank=+0.0000, loose_sec_jac=-0.0004, c_len=-0.0007, bm25_head_rel=-0.0011, bm25_act_rel=-0.0022, bm25_act=-0.0026, bm25_bi_rel=-0.0030, c_has_header=-0.0030, statute_idf=-0.0030, bm25_first=-0.0037, bm25_first_rank=-0.0063, c_hub=-0.0070, popularity=-0.0082
+- 10-26 18:45 LTR ablation no_date: dev micro-F1@7 0.3357 | P@7 0.3656 | R@7 0.3104
+- 10-26 18:45 LTR ablation no_statute: dev micro-F1@7 0.3168 | P@7 0.3450 | R@7 0.2929
+- 10-26 18:45 LTR ablation no_popularity: dev micro-F1@7 0.4836 | P@7 0.5266 | R@7 0.4471
+- 10-26 18:45 LTR ablation no_bench: dev micro-F1@7 0.3124 | P@7 0.3402 | R@7 0.2888
+- 10-26 18:45 LTR ablation no_shingles: dev micro-F1@7 0.2679 | P@7 0.2918 | R@7 0.2477
+- 10-26 18:45 LTR ablation no_rev: dev micro-F1@7 0.3346 | P@7 0.3644 | R@7 0.3094
+- 10-26 18:45 wrote scores_{train,dev,test}.json (train ltr = 5-fold OOF)
+- 10-26 18:45 wrote hardneg_train.json (bm25_full, exactq temporal filter, 50/query)
+- LTR v1 dev 0.320: popularity feature poisons it (no_popularity ablation 0.4836; train-OOF .496). v2: popularity excluded from model (kept in export), cand generator picked on TRAIN recall@200. Running fuse -> logs/lex_fuse2.log
+- 10-26 18:48 fuse: TRAIN recall@200 by generator {"bm25_full": 0.8048, "bm25_tri": 0.8131, "rrf_full_bi_tri": 0.8434} -> using rrf_full_bi_tri
+- 10-26 18:49 fuse: dev recall@200 by generator {"bm25_full": 0.8253, "bm25_tri": 0.8582, "rrf_full_bi_tri": 0.8726}
+- 10-26 18:49 fuse: tables built train (165400, 37), dev (23600, 37), test (47400, 37)
+- 10-26 18:49 fuse: train recall@200 of temporal-filtered bm25_full candidates: 0.8434
+- 10-26 18:49 fuse: dev recall@200 of temporal-filtered bm25_full candidates: 0.8726
+- 10-26 18:51 RRF bm25_bi+bm25_tri: train F1 0.3765 | dev micro-F1@7 0.4636 | P@7 0.5048 | R@7 0.4286
+- 10-26 18:51 RRF bm25_bi+bm25_tri+actfield_jac: train F1 0.3684 | dev micro-F1@7 0.4580 | P@7 0.4988 | R@7 0.4234
+- 10-26 18:51 RRF bm25_full+bm25_bi+bm25_tri: train F1 0.3678 | dev micro-F1@7 0.4558 | P@7 0.4964 | R@7 0.4214
+- 10-26 18:51 RRF(fixed) bm25_full+bm25_bi+bm25_tri: train F1 0.3678 | dev micro-F1@7 0.4558 | P@7 0.4964 | R@7 0.4214
+- 10-26 18:51 RRF(fixed) bm25_bi+actfield_jac: train F1 0.3509 | dev micro-F1@7 0.4480 | P@7 0.4879 | R@7 0.4142
+- 10-26 18:51 RRF(fixed) bm25_full+bm25_bi+bm25_tri+actfield_jac: train F1 0.3642 | dev micro-F1@7 0.4558 | P@7 0.4964 | R@7 0.4214
+- 10-26 18:52 LTR HGB (train -> dev, 36 feats): dev micro-F1@7 0.4847 | P@7 0.5278 | R@7 0.4481
+- 10-26 18:53 LTR HGB train 5-fold OOF: micro-F1@7 0.4147 | P@7 0.3975 | R@7 0.4335
+- 10-26 18:53 LTR permutation importance (dev F1 drop): bm25_tri=+0.0556, bm25_tri_rank=+0.0211, year_diff_qmax=+0.0133, rrf_full_bi_tri=+0.0126, rev_rank=+0.0085, c_len=+0.0070, year_diff=+0.0067, bm25_full_rank=+0.0033, bm25_full=+0.0019, c_year=+0.0019, acts_jac=+0.0015, bm25_bi=+0.0011, bm25_full_rel=+0.0011, q_year=+0.0007, bm25_first_rank=+0.0004, c_has_header=+0.0004, statute_jac=+0.0004, bm25_bi_rel=+0.0004, bm25_first_rel=+0.0004, statute_idf=+0.0004, bm25_head_rel=+0.0000, actfield_jac=+0.0000, bench_jac=+0.0000, bm25_act_rel=+0.0000, bm25_bi_rank=+0.0000, bm25_first=-0.0004, bm25_act_rank=-0.0007, bm25_act=-0.0007, bm25_head_rank=-0.0015, loose_sec_jac=-0.0015, c_hub=-0.0019, bm25_head=-0.0022, c_date_exact=-0.0022, q_len=-0.0030, q_date_exact=-0.0030, bm25_tri_rel=-0.0033
+- 10-26 18:53 LTR ablation WITH popularity (37 feats): dev micro-F1@7 0.3480 | P@7 0.3789 | R@7 0.3217
+- 10-26 18:53 LTR ablation no_date: dev micro-F1@7 0.4758 | P@7 0.5182 | R@7 0.4399
+- 10-26 18:53 LTR ablation no_statute: dev micro-F1@7 0.4880 | P@7 0.5315 | R@7 0.4512
+- 10-26 18:53 LTR ablation no_c_hub: dev micro-F1@7 0.4892 | P@7 0.5327 | R@7 0.4522
+- 10-26 18:53 LTR ablation no_bench: dev micro-F1@7 0.4792 | P@7 0.5218 | R@7 0.4430
+- 10-26 18:53 LTR ablation no_shingles: dev micro-F1@7 0.4447 | P@7 0.4843 | R@7 0.4111
+- 10-26 18:53 LTR ablation no_rev: dev micro-F1@7 0.4880 | P@7 0.5315 | R@7 0.4512
+- 10-26 18:54 wrote scores_{train,dev,test}.json (train ltr = 5-fold OOF)
+- 10-26 18:54 wrote hardneg_train.json (bm25_full) + hardneg_train_tri.json (bm25_tri, stronger), exactq filter, 50/query
+- RESUME CHECK (21:21): fuse v2 had ALREADY finished at ~18:53 (log logs/lex_fuse2.log) and wrote scores_{train,dev,test}.json, hardneg_train.json (byte-identical size to v1: same bm25_full+exactq, deterministic), hardneg_train_tri.json, ltr_hgb.pkl, ltr_importance.json. Nothing rewritten after the coordinator's message. Do NOT re-run `fuse` (it rewrites hardneg_train.json / scores_*.json that the neural run uses).
+- FUSE v2 RESULTS: cand generator picked on TRAIN recall@200: full .805, tri .813, rrf(full,bi,tri) .843 -> rrf (dev .873). RRF best-on-train bi+tri: dev 0.4636. LTR HGB (36 feats, no popularity): dev 0.4847 (P .528 R .448); train 5-fold OOF 0.4147. WITH popularity: dev 0.3480. Ablations (dev): no_shingles .4447, no_date .4758, no_bench .4792, no_statute .4880, no_rev .4880, no_c_hub .4892.
+- Pure set signals (random tie-break, dev exactq): statute_jac .169, statute_idf .161, acts_jac .148, actfield_jac .037 (23% coverage), bench .022, popularity .016, random .009.
+- POOL = UNION OF GOLD: train pool 4320 = 4107 gold-union + queries + 2; dev 1023 = 920 gold-union + queries + 0. Explains popularity: train LOO pop>0 for 37% of relevant vs 95% of non-relevant (anti-signal artefact); dev 37% vs 39% (none). Transductive implication: every candidate is relevant to >=1 query -> column-normalised / assignment-style scoring is a lead for the neural agent.
+- DONE. Final report sent.

@@ -1,0 +1,18 @@
+{
+  "name": "lora_doc",
+  "backbone": "../checkpoints/B_grown",
+  "peft": "lora",
+  "use_crf": true,
+  "doc_layers": 2,
+  "best": {
+    "macro_f1": 0.3235686153755488,
+    "macro_f1_supported": 0.38239927271655766,
+    "epoch": 12
+  },
+  "epochs": 40,
+  "wall_min": 86.68255062500636,
+  "trainable": 14831056,
+  "total": 155488720,
+  "trainable_pct": 9.53834850528064,
+  "peak_vram_mb": 2885.830656
+}

@@ -1,0 +1,22 @@
+{
+ "name": "qlora",
+ "method": "qlora",
+ "val500": {
+  "rouge1": 0.4255884288083712,
+  "pred_words": 344.244,
+  "rougeL": 0.22022656759650416,
+  "bertscore_f1": 0.8449947237968445
+ },
+ "gen": {
+  "max_new": 460,
+  "min_new": 200,
+  "greedy": true,
+  "repetition_penalty": 1.15,
+  "no_repeat_ngram": 4
+ },
+ "val_gen_min": 20.7,
+ "wall_min": 39.9,
+ "trainable": 1638400,
+ "total": 120617728,
+ "peak_vram_gb": 3.67
+}

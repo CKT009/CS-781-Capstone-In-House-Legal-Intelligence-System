@@ -1,0 +1,18 @@
+{
+  "name": "adapter_ctx1k",
+  "backbone": "../checkpoints/B_grown",
+  "peft": "adapter",
+  "use_crf": true,
+  "doc_layers": 2,
+  "best": {
+    "macro_f1": 0.45981571657901904,
+    "macro_f1_supported": 0.5434185741388406,
+    "epoch": 12
+  },
+  "epochs": 30,
+  "wall_min": 27.93299127817154,
+  "trainable": 1794640,
+  "total": 156830800,
+  "trainable_pct": 1.1443160399615382,
+  "peak_vram_mb": 1740.497408
+}

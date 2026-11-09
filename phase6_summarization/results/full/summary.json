@@ -1,0 +1,22 @@
+{
+ "name": "full",
+ "method": "full",
+ "val500": {
+  "rouge1": 0.42947927988666235,
+  "pred_words": 348.568,
+  "rougeL": 0.2209335512954224,
+  "bertscore_f1": 0.8451746702194214
+ },
+ "gen": {
+  "max_new": 460,
+  "min_new": 200,
+  "greedy": true,
+  "repetition_penalty": 1.15,
+  "no_repeat_ngram": 4
+ },
+ "val_gen_min": 12.6,
+ "wall_min": 27.1,
+ "trainable": 150436608,
+ "total": 150436608,
+ "peak_vram_gb": 5.12
+}

@@ -1,0 +1,25 @@
+{"config": "lead:560", "r1rec_open400": 0.6127722355824851, "r1rec_full": 0.44498285687908246, "avg_tokens": 556.648, "max_tokens": 560, "avg_words": 459.402, "secs": 1}
+{"config": "strat:560:0.6:4", "r1rec_open400": 0.6122482552043929, "r1rec_full": 0.4516417852790529, "avg_tokens": 556.636, "max_tokens": 560, "avg_words": 460.906, "secs": 1}
+{"config": "strat:560:0.8:4", "r1rec_open400": 0.6131043349363938, "r1rec_full": 0.44739383070902383, "avg_tokens": 556.658, "max_tokens": 560, "avg_words": 459.596, "secs": 1}
+{"config": "lr:560", "r1rec_open400": 0.6351717779862466, "r1rec_full": 0.4735016028124861, "avg_tokens": 558.462, "max_tokens": 560, "avg_words": 470.944, "secs": 5}
+{"config": "lr_lead:560:0.5", "r1rec_open400": 0.6235165403067197, "r1rec_full": 0.45961590566478105, "avg_tokens": 558.284, "max_tokens": 560, "avg_words": 464.586, "secs": 3}
+{"config": "lr_lead:560:0.7", "r1rec_open400": 0.6200446639624936, "r1rec_full": 0.45418307256674256, "avg_tokens": 558.402, "max_tokens": 560, "avg_words": 462.988, "secs": 3}
+{"config": "chunk:560:1:4", "r1rec_open400": 0.633374242422483, "r1rec_full": 0.4766890501323851, "avg_tokens": 556.652, "max_tokens": 560, "avg_words": 471.502, "secs": 3}
+{"config": "chunk:560:0:4", "r1rec_open400": 0.6294108191957294, "r1rec_full": 0.48794349111057206, "avg_tokens": 557.01, "max_tokens": 560, "avg_words": 476.574, "secs": 3}
+{"config": "lr+mmr0.3:560", "r1rec_open400": 0.6389999632394501, "r1rec_full": 0.47564046963525913, "avg_tokens": 558.302, "max_tokens": 560, "avg_words": 470.766, "secs": 8}
+{"config": "lr+mmr0.6:560", "r1rec_open400": 0.6416119156451959, "r1rec_full": 0.47800338896162725, "avg_tokens": 558.242, "max_tokens": 560, "avg_words": 471.344, "secs": 3}
+{"config": "lr+gbt:560", "r1rec_open400": 0.6461359918889136, "r1rec_full": 0.48614111355704315, "avg_tokens": 558.312, "max_tokens": 560, "avg_words": 472.434, "secs": 3}
+{"config": "lr+gbt+mmr0.3:560", "r1rec_open400": 0.6493316730759148, "r1rec_full": 0.48764658194744004, "avg_tokens": 558.22, "max_tokens": 560, "avg_words": 472.286, "secs": 4}
+{"config": "lr+gbt+mmr0.6:560", "r1rec_open400": 0.6516491889390986, "r1rec_full": 0.48808915367486827, "avg_tokens": 557.934, "max_tokens": 560, "avg_words": 470.628, "secs": 5}
+{"config": "lead:560", "r1rec_open400": 0.6127722355824851, "r1rec_full": 0.44498285687908246, "avg_tokens": 556.648, "max_tokens": 560, "avg_words": 459.402, "bertscore_f1": 0.845316469669342, "secs": 31}
+{"config": "strat:560:0.6:4", "r1rec_open400": 0.6122482552043929, "r1rec_full": 0.4516417852790529, "avg_tokens": 556.636, "max_tokens": 560, "avg_words": 460.906, "bertscore_f1": 0.8454277515411377, "secs": 20}
+{"config": "lr:560", "r1rec_open400": 0.6351717779862466, "r1rec_full": 0.4735016028124861, "avg_tokens": 558.462, "max_tokens": 560, "avg_words": 470.944, "bertscore_f1": 0.8501825332641602, "secs": 23}
+{"config": "lr_lead:560:0.5", "r1rec_open400": 0.6235165403067197, "r1rec_full": 0.45961590566478105, "avg_tokens": 558.284, "max_tokens": 560, "avg_words": 464.586, "bertscore_f1": 0.8467147350311279, "secs": 22}
+{"config": "chunk:560:1:4", "r1rec_open400": 0.633374242422483, "r1rec_full": 0.4766890501323851, "avg_tokens": 556.652, "max_tokens": 560, "avg_words": 471.502, "bertscore_f1": 0.8500159978866577, "secs": 22}
+{"config": "lr+gbt:560", "r1rec_open400": 0.6461359918889136, "r1rec_full": 0.48614111355704315, "avg_tokens": 558.312, "max_tokens": 560, "avg_words": 472.434, "bertscore_f1": 0.8531890511512756, "secs": 22}
+{"config": "lr+gbt+mmr0.3:560", "r1rec_open400": 0.6493316730759148, "r1rec_full": 0.48764658194744004, "avg_tokens": 558.22, "max_tokens": 560, "avg_words": 472.286, "bertscore_f1": 0.8536219000816345, "secs": 22}
+{"config": "lr+gbt+mmr0.6:560", "r1rec_open400": 0.6516491889390986, "r1rec_full": 0.48808915367486827, "avg_tokens": 557.934, "max_tokens": 560, "avg_words": 470.628, "bertscore_f1": 0.8539798855781555, "secs": 53}
+{"config": "lr+gbt+mmr0.6:400", "r1rec_open400": 0.5366094186842949, "r1rec_full": 0.3864574475119648, "avg_tokens": 398.674, "max_tokens": 400, "avg_words": 336.992, "bertscore_f1": 0.8529393672943115, "secs": 21}
+{"config": "lr+gbt+mmr0.6:800", "r1rec_open400": 0.742489642121443, "r1rec_full": 0.5965711718417778, "avg_tokens": 795.372, "max_tokens": 800, "avg_words": 670.914, "bertscore_f1": 0.8521072864532471, "secs": 23}
+{"config": "lead:400", "r1rec_open400": 0.4891363805798837, "r1rec_full": 0.34475217308274103, "avg_tokens": 397.628, "max_tokens": 400, "avg_words": 326.242, "bertscore_f1": 0.8432050943374634, "secs": 19}
+{"config": "lead:800", "r1rec_open400": 0.7157586164753614, "r1rec_full": 0.5553540607657976, "avg_tokens": 793.36, "max_tokens": 800, "avg_words": 659.656, "bertscore_f1": 0.8453154563903809, "secs": 21}

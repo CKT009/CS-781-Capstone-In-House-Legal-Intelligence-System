@@ -1,0 +1,29 @@
+{
+  "name": "last4_B_f2",
+  "backbone": "../checkpoints/B_encoder",
+  "peft": "last_k",
+  "train_folds": [
+    "fold1",
+    "fold2"
+  ],
+  "dev_folds": [
+    "fold2"
+  ],
+  "dev_contaminated": true,
+  "peft_kw": {
+    "k": 4
+  },
+  "use_crf": false,
+  "best": {
+    "macro_f1": 0.8599438298569239,
+    "epoch": 7,
+    "step": 1099
+  },
+  "epochs": 7,
+  "steps": 1099,
+  "wall_min": 3.7,
+  "trainable": 28372249,
+  "total": 98149657,
+  "trainable_pct": 28.90713005752022,
+  "peak_vram_mb": 891.2
+}

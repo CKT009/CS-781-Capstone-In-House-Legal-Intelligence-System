@@ -1,0 +1,21 @@
+{
+  "name": "prefix_B",
+  "backbone": "../checkpoints/B_encoder",
+  "peft": "prefix",
+  "peft_kw": {
+    "n_prefix": 16
+  },
+  "use_crf": false,
+  "best": {
+    "macro_f1": 0.2242319886432513,
+    "epoch": 20,
+    "step": 1580
+  },
+  "epochs": 20,
+  "steps": 1580,
+  "wall_min": 7.6,
+  "trainable": 314137,
+  "total": 98444569,
+  "trainable_pct": 0.31910038633009813,
+  "peak_vram_mb": 1854.7
+}

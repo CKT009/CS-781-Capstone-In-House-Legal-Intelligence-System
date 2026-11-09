@@ -1,0 +1,22 @@
+{
+ "name": "adalora",
+ "method": "adalora",
+ "val500": {
+  "rouge1": 0.42178857008287074,
+  "pred_words": 358.612,
+  "rougeL": 0.21692755445716852,
+  "bertscore_f1": 0.841649055480957
+ },
+ "gen": {
+  "max_new": 460,
+  "min_new": 200,
+  "greedy": true,
+  "repetition_penalty": 1.15,
+  "no_repeat_ngram": 4
+ },
+ "val_gen_min": 14.8,
+ "wall_min": 30.4,
+ "trainable": 1229760,
+ "total": 151666368,
+ "peak_vram_gb": 3.78
+}

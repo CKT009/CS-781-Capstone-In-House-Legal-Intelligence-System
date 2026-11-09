@@ -1,0 +1,31 @@
+{
+ "name": "kd_control_tinit",
+ "peft": "distill",
+ "peft_kw": {
+  "teacher_run": "runs/full",
+  "keep_every": 2,
+  "alpha": 1.0,
+  "student_init": "teacher"
+ },
+ "K": 4,
+ "K_eval": 8,
+ "pool": "mean",
+ "best_step": 996,
+ "dev": {
+  "f1": 0.13896609227348525,
+  "p": 0.1513317191283293,
+  "r": 0.12846865364850976,
+  "hits": 125,
+  "r100": 0.5560123329907503
+ },
+ "date_filter": true,
+ "hardneg": true,
+ "trainable": 77457409,
+ "total": 77457409,
+ "pct": 100.0,
+ "steps": 996,
+ "s_per_step": 3.98,
+ "wall_min": 67.7,
+ "peak_vram_gb": 7.71,
+ "submission": "PLM_interp7/subs/kd_control_tinit.zip"
+}

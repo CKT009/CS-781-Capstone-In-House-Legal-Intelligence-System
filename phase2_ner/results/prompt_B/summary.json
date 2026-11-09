@@ -1,0 +1,21 @@
+{
+  "name": "prompt_B",
+  "backbone": "../checkpoints/B_encoder",
+  "peft": "prompt",
+  "peft_kw": {
+    "n_prompt": 20
+  },
+  "use_crf": false,
+  "best": {
+    "macro_f1": 0.2486375464611625,
+    "epoch": 16,
+    "step": 1264
+  },
+  "epochs": 20,
+  "steps": 1580,
+  "wall_min": 7.1,
+  "trainable": 34585,
+  "total": 98165017,
+  "trainable_pct": 0.035231491886768586,
+  "peak_vram_mb": 1070.9
+}

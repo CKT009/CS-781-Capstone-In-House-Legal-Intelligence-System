@@ -1,0 +1,19 @@
+{
+  "name": "bitfit_M",
+  "backbone": "../checkpoints/M_mamba",
+  "peft": "bitfit",
+  "peft_kw": {},
+  "use_crf": false,
+  "best": {
+    "macro_f1": 0.2752518285833798,
+    "epoch": 14,
+    "step": 1106
+  },
+  "epochs": 20,
+  "steps": 1580,
+  "wall_min": 10.1,
+  "trainable": 95081,
+  "total": 100298505,
+  "trainable_pct": 0.09479802316096336,
+  "peak_vram_mb": 1973.9
+}

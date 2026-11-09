@@ -1,0 +1,22 @@
+{
+ "name": "lora_lead",
+ "method": "lora",
+ "val500": {
+  "rouge1": 0.40417239315932896,
+  "pred_words": 342.358,
+  "rougeL": 0.21385986251354622,
+  "bertscore_f1": 0.8411344885826111
+ },
+ "gen": {
+  "max_new": 460,
+  "min_new": 200,
+  "greedy": true,
+  "repetition_penalty": 1.15,
+  "no_repeat_ngram": 4
+ },
+ "val_gen_min": 18.6,
+ "wall_min": null,
+ "trainable": null,
+ "total": null,
+ "peak_vram_gb": 2.62
+}

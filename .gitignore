@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+*.pt
+*.pth
+*.npy
+*.npz
+*.zip
+data/
+checkpoints/
+artifacts/shards*/
+artifacts/tokens/
+artifacts/emb/
+runs/
+subs/

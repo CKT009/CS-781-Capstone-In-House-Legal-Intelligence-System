@@ -1,0 +1,22 @@
+{
+ "name": "prompt",
+ "method": "prompt",
+ "val500": {
+  "rouge1": 0.4266930688263779,
+  "pred_words": 378.99,
+  "rougeL": 0.21467678787912964,
+  "bertscore_f1": 0.839866578578949
+ },
+ "gen": {
+  "max_new": 460,
+  "min_new": 200,
+  "greedy": true,
+  "repetition_penalty": 1.15,
+  "no_repeat_ngram": 4
+ },
+ "val_gen_min": 16.4,
+ "wall_min": null,
+ "trainable": null,
+ "total": null,
+ "peak_vram_gb": 2.62
+}

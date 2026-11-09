@@ -1,0 +1,20 @@
+{
+ "name": "full_k4",
+ "peft": "full",
+ "K": 4,
+ "keep": "ends",
+ "pool": "attn",
+ "best_step": 8016,
+ "dev": {
+  "global_thr": 0.19999999999999998,
+  "macro_f1_global": 0.40817470905551567,
+  "macro_f1_perlabel": 0.43086237167579794,
+  "macro_f1_crossfit": 0.4126737662055989,
+  "micro_f1": 0.5264685732864226,
+  "subset_acc": 0.062272861212061686
+ },
+ "trainable": 140848485,
+ "total": 140848485,
+ "wall_min": 165.3,
+ "peak_vram_gb": 4.45
+}

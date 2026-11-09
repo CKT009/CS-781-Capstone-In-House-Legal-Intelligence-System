@@ -1,0 +1,32 @@
+{
+ "name": "kd_student_tinit",
+ "peft": "distill",
+ "peft_kw": {
+  "teacher_run": "runs/full",
+  "keep_every": 2,
+  "alpha": 0.5,
+  "tau": 1.0,
+  "student_init": "teacher"
+ },
+ "K": 4,
+ "K_eval": 8,
+ "pool": "mean",
+ "best_step": 996,
+ "dev": {
+  "f1": 0.16564758198999444,
+  "p": 0.18038740920096852,
+  "r": 0.15313463514902365,
+  "hits": 149,
+  "r100": 0.6145940390544707
+ },
+ "date_filter": true,
+ "hardneg": true,
+ "trainable": 77457409,
+ "total": 77457409,
+ "pct": 100.0,
+ "steps": 996,
+ "s_per_step": 2.21,
+ "wall_min": 39.0,
+ "peak_vram_gb": 7.71,
+ "submission": "PLM_interp7/subs/kd_student_tinit.zip"
+}
